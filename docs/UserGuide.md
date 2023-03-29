@@ -8,7 +8,7 @@ for use via a Command Line Interface (CLI), while still having a Graphical User 
 on. If you are a strong typist and are familiar with the system, Patientist can get your tasks done faster and more
 reliably than traditional GUI based apps.
 
-![MainScreen](../docs/images/Ui.png)
+![MainScreen](images/Ui.png)
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -37,7 +37,7 @@ reliably than traditional GUI based apps.
   * [Delete a prescription from a patient](#deleting-an-entry-from-a-patients-list-of-prescriptions--delpresc)
   * [Delete a ward from the system](#deleting-a-ward-from-the-system--delward)
   * [Exit the program](#exiting-the-program--exit)
-- **[Frequently asked questions](#FAQ)**
+- **[Frequently asked questions](#faq)**
 - **[Command Summary](#command-summary)**
 
 
@@ -62,9 +62,11 @@ reliably than traditional GUI based apps.
 * Items in square brackets are optional parameters, e.g. `addpat n/NAME [t/TAG]` can be used as `addpat n/John Doe t/urgent` or simply as `addpat n/John Doe`
 * Items with … after them can be specified 0 or more times, e.g. `[t/TAG]...` means it is valid to not include a tag, or you can chain 1 or more `t/TAG` expressions
 * Extraneous parameters for commands that take in exactly 0 parameters will be ignored
+
 ---
 
-## Viewing help: help
+
+## Viewing help : `help`
 Shows a popup explaining how to access the user guide, which is the help page.
 
 Format: `help`
@@ -91,6 +93,7 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Adding a staff member: addstf
 Assigns specified `STAFF_NAME` to the specified `WARD_NAME`.
 The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
@@ -106,6 +109,7 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Adding prescriptions/instructions for patient: addpresc
 Adds `PRESCRIPTION_OR_INSTRUCTION` in the prescriptions and instructions field for the `PATIENT` specified.
 The patient can be specified by `ID_NUMBER`, the patient’s ID number.
@@ -119,6 +123,7 @@ The patient can be specified by `ID_NUMBER`, the patient’s ID number.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Adding a ward to the system: addward
 Creates an empty ward with the specified `WARD_NAME`.
 
@@ -134,6 +139,7 @@ Creates an empty ward with the specified `WARD_NAME`.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Listing all patients: lspat
 Lists all the patients’ names and corresponding patient ID, displaying any tags attached to them and showing the ward they are in.
 
@@ -149,6 +155,7 @@ Lists all the patients’ names and corresponding patient ID, displaying any tag
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Listing staff members: lsstf
 
 Lists staff members’ names and the name of the ward they are assigned to.
@@ -166,6 +173,7 @@ can appear more than once if they are assigned to more than 1 ward.\
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Listing a patient’s prescriptions: lspresc
 Lists the prescriptions and instructions list for a patient in numbered list form for the patient specified by `ID_NUMBER`.
 
@@ -177,6 +185,7 @@ Lists the prescriptions and instructions list for a patient in numbered list for
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Listing all wards: lsward
 Lists all existing wards on the GUI. Only ward names will be displayed.
 
@@ -185,6 +194,7 @@ Lists all existing wards on the GUI. Only ward names will be displayed.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Viewing the details of a specific patient: view
 Lists the full detail of a specific patient, including their prescriptions/instructions, name, patient ID and tags in the main window.
 
@@ -196,6 +206,7 @@ Lists the full detail of a specific patient, including their prescriptions/instr
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Update patient particulars: editpat
 This overwrites the specified patient’s particulars with new particulars. The patient to be edited must exist, i.e. there must exist a
 patient with the given `ID_NUMBER`. **All existing information about the patient will be deleted, and replaced with
@@ -210,6 +221,7 @@ the new information.**
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Deleting a patient from the system: delpat
 This removes the patient from the system as specified by `ID_NUMBER`.
 The patient must currently exist for this command to be successfully executed.
@@ -223,6 +235,7 @@ This will remove the patient from his or her assigned ward as well.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Deleting a staff member from a ward: delstf
 This removes `STAFF_NAME` from the list of persons in charge of `WARD_NAME`. The staff must be currently assigned to the ward for this command to be successfully executed.
 
@@ -236,6 +249,7 @@ This removes `STAFF_NAME` from the list of persons in charge of `WARD_NAME`. The
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Deleting an entry from a patient’s list of prescriptions: delpresc
 Deletes the list entry specified at `INDEX` on the patient’s list of prescriptions and instructions, for the patient
 specified by `ID_NUMBER`. The patient must currently exist and the value of `INDEX` must represent a valid entry
@@ -250,6 +264,7 @@ ID A0123456789B.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Deleting a ward from the system: delward
 This deletes the `WARD_NAME` specified from the system. The ward being deleted must be empty for this command to be successfully executed.
 
@@ -263,6 +278,7 @@ This deletes the `WARD_NAME` specified from the system. The ward being deleted m
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Exiting the program: exit
 Exits the program.
 
@@ -271,6 +287,7 @@ Exits the program.
 [Go back to [Table of Contents](#table-of-contents)]
 
 --------------------------------------------------------------------------------------------------------------------
+
 ## FAQ
 
 **Q**: How do I transfer my data to another Computer?<br>
