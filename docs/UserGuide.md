@@ -17,7 +17,9 @@ reliably than traditional GUI based apps.
 * If you are unsure how to use Patientist, the [Features](#features) section might be a good place to start.
 * For ease of navigation, clicking the hyperlinks at the bottom of each section to go back to the table of contents.
 
-* Table of Contents
+___
+
+## Table of Contents
 {:toc}
 
 --------------------------------------------------------------------------------------------------------------------
