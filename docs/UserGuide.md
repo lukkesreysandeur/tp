@@ -8,7 +8,7 @@ for use via a Command Line Interface (CLI), while still having a Graphical User 
 on. If you are a strong typist and are familiar with the system, Patientist can get your tasks done faster and more
 reliably than traditional GUI based apps.
 
-![MainScreen](../docs/images/Ui.png)
+![MainScreen](images/Ui.png)
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -17,29 +17,8 @@ reliably than traditional GUI based apps.
 * If you are unsure how to use Patientist, the [Features](#features) section might be a good place to start.
 * For ease of navigation, clicking the hyperlinks at the bottom of each section to go back to the table of contents.
 
-
-## Table of Contents (OUTDATED TABLE!!!!!)
-- **[Quick Start](#quick-start)**
-- **[Features](#features)**
-  * [Viewing help](#viewing-help--help)
-  * [Adding a patient](#adding-a-patient--addpat)
-  * [Adding a staff member](#adding-a-staff-member--addstf)
-  * [Adding prescriptions/instructions for a patient](#adding-prescriptionsinstructions-for-patient--addpresc)
-  * [Adding a ward to the system](#adding-a-ward-to-the-system--addward)
-  * [List all patients](#listing-all-patients--lspat)
-  * [List all staff members](#listing-staff-members--lsstf)
-  * [List a patient's prescriptions](#listing-a-patients-prescriptions--lspresc)
-  * [List all wards](#listing-all-wards--lsward)
-  * [View a patient's details](#viewing-the-details-of-a-specific-patient--view)
-  * [Update patient's particulars](#update-patient-particulars--editpat)
-  * [Delete a patient](#deleting-a-patient-from-the-system--delpat)
-  * [Delete a staff member](#deleting-a-staff-member-from-a-ward--delstf)
-  * [Delete a prescription from a patient](#deleting-an-entry-from-a-patients-list-of-prescriptions--delpresc)
-  * [Delete a ward from the system](#deleting-a-ward-from-the-system--delward)
-  * [Exit the program](#exiting-the-program--exit)
-- **[Frequently asked questions](#FAQ)**
-- **[Command Summary](#command-summary)**
-
+## Table of Contents
+  {:toc}
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -56,12 +35,12 @@ reliably than traditional GUI based apps.
 
 ## Features
 
-
 ## Notes about formatting
 * Words in UPPER_CASE are user supplied parameters, e.g. `addpat n/NAME`: `NAME` is a parameter, and the command can be used as add `n/John Doe`
 * Items in square brackets are optional parameters, e.g. `addpat n/NAME [t/TAG]` can be used as `addpat n/John Doe t/urgent` or simply as `addpat n/John Doe`
 * Items with … after them can be specified 0 or more times, e.g. `[t/TAG]...` means it is valid to not include a tag, or you can include 1 or more `t/TAG` expressions
 * Extraneous parameters for commands that take in exactly 0 parameters will be ignored
+
 ---
 
 ## Viewing help: help
