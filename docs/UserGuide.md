@@ -12,7 +12,7 @@ reliably than traditional GUI based apps.
 
 --------------------------------------------------------------------------------------------------------------------
 
-#### Using this guide
+## Using this guide
 * If you are setting up for the first time, please have a look at our [Quick Start](#quick-start) section.
 * If you are unsure how to use Patientist, the [Features](#features) section might be a good place to start.
 * For ease of navigation, clicking the hyperlinks at the bottom of each section to go back to the table of contents.
