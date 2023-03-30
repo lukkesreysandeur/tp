@@ -290,7 +290,7 @@ Exits the program.
 [Go back to [Table of Contents](#table-of-contents)]
 
 --------------------------------------------------------------------------------------------------------------------
-## FAQ
+# FAQ
 
 **Q**: How do I transfer my data to another Computer?<br>
 **A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Patientist home folder.
@@ -298,7 +298,7 @@ Exits the program.
 [Go back to [Table of Contents](#table-of-contents)]
 
 --------------------------------------------------------------------------------------------------------------------
-## Command summary (OUTDATED TABLE!!!!!)
+# Command summary (OUTDATED TABLE!!!!!)
 
 | Action                           | Format, Examples                                                                                                                                                                                                           |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
