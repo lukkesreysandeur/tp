@@ -18,7 +18,7 @@ reliably than traditional GUI based apps.
 * For ease of navigation, clicking the hyperlinks at the bottom of each section to go back to the table of contents.
 
 * Table of Contents
-  {:toc}
+{:toc}
 
 --------------------------------------------------------------------------------------------------------------------
 
