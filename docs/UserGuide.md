@@ -37,7 +37,7 @@ ___
 
 --------------------------------------------------------------------------------------------------------------------
 
-## Features
+# Features
 
 ## Notes about formatting
 * Words in UPPER_CASE are user supplied parameters, e.g. `addpat n/NAME`: `NAME` is a parameter, and the command can be used as add `n/John Doe`
