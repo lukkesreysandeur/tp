@@ -166,7 +166,7 @@ them on the GUI.
 
 ---
 ## Adding patient status: addpatstatus
-Adds an entry to the list of patient statuses. This list can be viewed by the [view](#viewing-the-details-of-a-specific-patient--view)
+Adds an entry to the list of patient statuses. This list can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
 command.
 
 **Note:** If the person indicated by the INDEX must be a `Patient`.
@@ -179,7 +179,7 @@ command.
 
 ---
 ## Deleting patient status: delpatstatus
-Deletes the specified entry in the list of patient statuses. This list can be viewed by the [view](#viewing-the-details-of-a-specific-patient--view)
+Deletes the specified entry in the list of patient statuses. This list can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
 command.
 
 **Note:** If the person indicated by the PATIENT_INDEX must be a `Patient`.
@@ -298,7 +298,7 @@ Exits the program.
 [Go back to [Table of Contents](#table-of-contents)]
 
 --------------------------------------------------------------------------------------------------------------------
-# Command summary (OUTDATED TABLE!!!!!)
+# Command summary
 
 | Action                           | Format, Examples                                                                                                                                                                                                           |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
