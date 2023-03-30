@@ -17,8 +17,8 @@ import seedu.patientist.model.person.patient.PatientNameContainsKeywordsPredicat
 public class FindPatientCommand extends Command {
     public static final String COMMAND_WORD = "findpat";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds all patients whose id contain any of "
-            + "the specified keywords (case-insensitive) and displays them as a list with index numbers.\n"
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds all patients whose id or name contain any "
+            + "of the specified keywords (case-insensitive) and displays them as a list with index numbers.\n"
             + "Keywords must be either name or id number.\n"
             + "Parameters: "
             + "[" + PREFIX_NAME + "NAME] "
