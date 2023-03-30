@@ -74,7 +74,7 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 `PATIENT_NAME` need not be unique.
 
 **Examples:**
-`addpat n/John Doe id/A12345B w/Block B Ward 2 p/98765432 e/johnd@example.com a/311, Clementi Ave 2, #02-25 t/friends`
+**`addpat n/John Doe id/A12345B w/Block B Ward 2 p/98765432 e/johnd@example.com a/311, Clementi Ave 2, #02-25 t/friends`**
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -88,8 +88,8 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 **Format: `addstf n/STAFF_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME`**
 
 **Examples:**
-`addstf n/Dr. Mallory Wong id/A987654321H p/97365482 e/mwong@example.com a/390 Geylang Rd w/block B ward 2`\
-`addstf n/Nurse Joy id/A345678Z p/81623753, e/nurse.joy@example.com a/900 Still Rd w/block B ward 2`
+**`addstf n/Dr. Mallory Wong id/A987654321H p/97365482 e/mwong@example.com a/390 Geylang Rd w/block B ward 2`**\
+**`addstf n/Nurse Joy id/A345678Z p/81623753, e/nurse.joy@example.com a/900 Still Rd w/block B ward 2`**
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -103,8 +103,8 @@ Creates an empty ward with the specified `WARD_NAME`.
 `WARD_NAME` must be unique and cannot be the same as any existing name. This field is case-sensitive.
 
 **Examples:**
-`addward n/block B ward 2` will create a new empty ward called block B ward 2\
-`addward n/block C ward 1` will create a new empty ward called block C ward 1
+**`addward n/block B ward 2`** will create a new empty ward called block B ward 2\
+**`addward n/block C ward 1`** will create a new empty ward called block C ward 1
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -112,13 +112,10 @@ Creates an empty ward with the specified `WARD_NAME`.
 ## Listing all patients: lspat
 Lists all the patients’ names and corresponding patient ID, displaying any tags attached to them and showing the ward they are in.
 
-**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
-
 **Format: `lspat`**
-`WARD_NAME` can be specified to only list patients in the specified ward. This field is case-sensitive. This is an optional parameter.
 
 **Examples:**
-`lspat` will list all patients in each ward on the GUI. Every ward will be displayed in order, with all patients in each ward.\
+**`lspat`** will list all patients in each ward on the GUI. Every ward will be displayed in order, with all patients in each ward.\
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -127,13 +124,10 @@ Lists all the patients’ names and corresponding patient ID, displaying any tag
 
 Lists staff members’ names and the name of the ward they are assigned to.
 
-**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
-
 **Format: `lsstf`**
-`WARD_NAME` can be specified to only list staff in the specified ward. This is an optional parameter.
 
 **Examples:**
-`lsstf` will list all staff assigned to each ward on the GUI. The lists will be grouped according to ward, and each staff
+**`lsstf`** will list all staff assigned to each ward on the GUI. The lists will be grouped according to ward, and each staff
 can appear more than once if they are assigned to more than 1 ward.\
 
 [Go back to [Table of Contents](#table-of-contents)]
@@ -155,13 +149,13 @@ Finds all persons with names containing any of the specified keywords and displa
 Finds all patients with names containing any of the specified keywords or id matching the specified keyword and displays
 them on the GUI.
 
-**Format:** `findpat [n/NAME] [id/ID_NUMBER]`
+**Format: `findpat [n/NAME] [id/ID_NUMBER]`**
 
 **Note:** Either NAME or ID_NUMBER must be present.
 
 **Examples:**
-`findpat n/Alex Bob Charles` Finds all patients with names containing Alex, Bob or Charles.\
-`findpat id/A12345B` Finds all patients with IDs matching A12345B.
+**`findpat n/Alex Bob Charles`** Finds all patients with names containing Alex, Bob or Charles.\
+**`findpat id/A12345B`** Finds all patients with IDs matching A12345B.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -187,7 +181,7 @@ command.
 
 **Format: `delpatstatus PATIENT_INDEX STATUS_INDEX`**
 
-**Examples:** `delpatstatus 1 1` will delete the first status of the patient at the top of the list.
+**Examples: `delpatstatus 1 1`** will delete the first status of the patient at the top of the list.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -198,7 +192,7 @@ Lists the full detail of a specific person, including their name, patient ID and
 **Format: `view INDEX`**
 
 **Examples:**
-`view 1` will display all the information associated with the 1st person shown on the GUI.
+**`view 1`** will display all the information associated with the 1st person shown on the GUI.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -217,7 +211,7 @@ Lists all the patients found in the given `WARD_NAME`.
 
 **Format: `lswardpat WARD_NAME`**
 
-**Examples:** `lswardpat Block A Ward 1` will list all patients in Block A Ward 1.
+**Examples: `lswardpat Block A Ward 1`** will list all patients in Block A Ward 1.
 
 ---
 ## Update a person's particulars: edit
@@ -226,8 +220,8 @@ This overwrites the specified person’s particulars with new particulars. This 
 **Format: `edit INDEX [n/PATIENT_NAME] [t/TAG] [p/PHONE_NUMBER] [a/ADDRESS] [e/EMAIL]`**
 
 **Examples:**
-`edit 1 p/81234567`\
-`edit 2 n/Bob Tan p/91234567`
+**`edit 1 p/81234567`**\
+**`edit 2 n/Bob Tan p/91234567`**
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -250,7 +244,7 @@ This will remove the patient from his or her assigned ward as well.
 **Format: `delpat id/ID_NUMBER`**
 
 **Examples:**
-`delpat id/A0123456789B` will delete all records of patient with ID number A0123456789B from the system.
+**`delpat id/A0123456789B`** will delete all records of patient with ID number A0123456789B from the system.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -263,7 +257,7 @@ This will remove the staff from his or her assigned ward as well.
 **Format: `delstf id/ID_NUMBER`**
 
 **Examples:**
-`delstf id/A12345B` will delete all records of staff with ID number A12345B from the system.
+**`delstf id/A12345B`** will delete all records of staff with ID number A12345B from the system.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -277,7 +271,7 @@ This deletes the `WARD_NAME` specified from the system. The ward being deleted m
 **Format: `delward n/WARD_NAME`**
 
 **Examples:**
-`delward n/block B ward 2` will remove block B ward 2 from the system. The ward must have been empty before deletion.
+**`delward n/block B ward 2`** will remove block B ward 2 from the system. The ward must have been empty before deletion.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
