@@ -19,10 +19,10 @@ reliably than traditional GUI based apps.
 
 ___
 
-## Table of Contents
 
 * Table of Contents
 {:toc}
+
 
 --------------------------------------------------------------------------------------------------------------------
 
