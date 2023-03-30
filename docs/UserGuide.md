@@ -17,7 +17,7 @@ reliably than traditional GUI based apps.
 * If you are unsure how to use Patientist, the [Features](#features) section might be a good place to start.
 * For ease of navigation, clicking the hyperlinks at the bottom of each section to go back to the table of contents.
 
-## Table of Contents
+* Table of Contents
   {:toc}
 
 --------------------------------------------------------------------------------------------------------------------
@@ -268,6 +268,7 @@ This will remove the staff from his or her assigned ward as well.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Deleting a ward from the system: delward
 This deletes the `WARD_NAME` specified from the system. The ward being deleted must be empty for this command to be successfully executed.
 
@@ -281,6 +282,7 @@ This deletes the `WARD_NAME` specified from the system. The ward being deleted m
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ## Exiting the program: exit
 Exits the program.
 
