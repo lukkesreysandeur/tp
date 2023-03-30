@@ -20,6 +20,8 @@ reliably than traditional GUI based apps.
 ___
 
 ## Table of Contents
+
+* Table of Contents
 {:toc}
 
 --------------------------------------------------------------------------------------------------------------------
@@ -117,7 +119,7 @@ Lists all the patients’ names and corresponding patient ID, displaying any tag
 **Format: `lspat`**
 
 **Examples:**
-**`lspat`** will list all patients in each ward on the GUI. Every ward will be displayed in order, with all patients in each ward.\
+**`lspat`** will list all patients in each ward on the GUI. Every ward will be displayed in order, with all patients in each ward.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
