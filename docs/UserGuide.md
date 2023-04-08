@@ -29,7 +29,7 @@ We will be using certain symbols throughout the User Guide, so here is a quick s
 
 <div markdown="span" class="alert alert-info">
 
-:information_source: Information that is good for you to know but not necessary.
+:information_source: Information that is good for you to know.
 
 </div>
 
@@ -41,10 +41,9 @@ We will be using certain symbols throughout the User Guide, so here is a quick s
 
 <div markdown="span" class="alert alert-danger">
 
-:warning: Warnings so that Patientist works as intended.
+:warning: Warnings to heed so that Patientist works as intended.
 
 </div>
-
 
 ___
 
@@ -83,7 +82,29 @@ ___
 ---
 
 ## Adding/Removing Wards
-These commands can add or delete wards to reflect the physical wards in the hospital.
+Patientist is meant to help reflect the physical state of your hospital, so if you are a new user and would like to update Patientist with the wards, here's what you do:
+
+Scenario: 
+
+Let's say the hospital has just added a new ward, with the name "Block 3 Ward B", and you would like to add it to Patientist. 
+
+Command entered: [addward](#addward) n/Block 3 Ward B
+
+This is the message that you should see indicating that the ward has been added to the system.
+
+![addward.png](images/addward.png)
+
+<center>Message shown after entering addward</center> 
+
+This means that the ward "Block 3 Ward B" has been added to Patientist.
+
+Now let's say you accidentally added the wrong ward, and it should have been "Block 3 Ward A" instead.
+Well, its just as simple to remove the ward. Simply use the `delward` command with the name of the ward to be removed.
+
+Command entered: [delward](#delward) n/Block 3 Ward B
+
+A similar looking message should appear indicating that the ward was successfully removed.
+
 
 ### Adding a ward to the system: addward
 {: #addward}
@@ -133,7 +154,6 @@ These commands can be used to add people to a specified ward in the Patientist s
 :warning: The ward specified must exist first. If it has not been added, perhaps you might want to check out [`addward`](#addward) first.
 
 </div>
-
 ### Adding a patient: addpat
 Adds a new patient to the system, and places them in the `WARD_NAME` assigned.
 Tags attached to a user are meant to be short notes that do not fit into any other category of patient details that can be added.
@@ -164,7 +184,7 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
 <div markdown="span" class="alert alert-danger">
 
-**`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
 
 </div>
 
@@ -231,9 +251,9 @@ This will remove the staff from his or her assigned ward as well.
 ## Listing information
 These commands can be used to list people and wards. 
 
-<div markdown="span" class="alert alert-info">
+<div markdown="span" class="alert alert-success">
 
-:information_source: List updates the GUI, which can affect index-based commands such as [`delete`](#delete)
+:bulb: List updates the GUI, which can affect index-based commands such as [`delete`](#delete)
 
 </div> 
 
