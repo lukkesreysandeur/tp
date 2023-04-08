@@ -90,7 +90,11 @@ These commands can add or delete wards to reflect the physical wards in the hosp
 
 Creates an empty ward with the specified `WARD_NAME`.
 
-**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+<div markdown="span" class="alert alert-danger">
+
+:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+
+</div>
 
 **Format: `addward n/WARD_NAME`**
 `WARD_NAME` must be unique and cannot be the same as any existing name. This field is case-sensitive.
@@ -106,7 +110,11 @@ Creates an empty ward with the specified `WARD_NAME`.
 ### Deleting a ward from the system: delward
 This deletes the `WARD_NAME` specified from the system. The ward being deleted must be empty for this command to be successfully executed.
 
-**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+<div markdown="span" class="alert alert-danger">
+
+:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+
+</div>
 
 **Format: `delward n/WARD_NAME`**
 
@@ -130,7 +138,11 @@ These commands can be used to add people to a specified ward in the Patientist s
 Adds a new patient to the system, and places them in the `WARD_NAME` assigned.
 Tags attached to a user are meant to be short notes that do not fit into any other category of patient details that can be added.
 
-**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`.
+<div markdown="span" class="alert alert-danger">
+
+:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`.
+
+</div>
 
 **Format: `addpat n/PATIENT_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME pr/PRIORITY [t/TAG]...`**
 
@@ -150,7 +162,11 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 Assigns specified `STAFF_NAME` to the specified `WARD_NAME`.
 The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
-**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+<div markdown="span" class="alert alert-danger">
+
+**`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+
+</div>
 
 **Format: `addstf n/STAFF_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME`**
 
@@ -243,7 +259,6 @@ Lists all the patients’ names and corresponding patient ID, displaying any tag
 ---
 
 ### Listing staff members: lsstf
-
 Lists staff members’ names and the name of the ward they are assigned to.
 
 **Format: `lsstf`**
@@ -310,7 +325,11 @@ them on the GUI.
 
 **Format: `findpat [n/NAME] [id/ID_NUMBER]`**
 
-**Note:** Either NAME or ID_NUMBER must be present.
+<div markdown="span" class="alert alert-info">
+
+:information_source: Either NAME or ID_NUMBER must be present.
+
+</div>
 
 **Examples:**
 **`findpat n/Alex Bob Charles`** Finds all patients with names containing Alex, Bob or Charles.\
@@ -326,7 +345,11 @@ them on the GUI.
 
 **Format: `findstf [n/NAME] [id/ID_NUMBER]`**
 
-**Note:** Either NAME or ID_NUMBER must be present.
+<div markdown="span" class="alert alert-info">
+
+:information_source: Either NAME or ID_NUMBER must be present.
+
+</div>
 
 **Examples:**
 **`findstf n/Alex Bob Charles`** Finds all staff with names containing Alex, Bob or Charles.\
@@ -355,7 +378,11 @@ This overwrites the specified person’s particulars with new particulars. This 
 ### Transferring a patient between wards: trfward
 This moves the patient at `INDEX` position on the list to the specified `WARD_NAME`. `WARD_NAME` must already exist.
 
-**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+<div markdown="span" class="alert alert-danger">
+
+:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+
+</div>
 
 **Format: `trfward INDEX w/WARD_NAME`**
 
@@ -373,7 +400,11 @@ These commands can add or remove todos with regards to a specified patient.
 Adds an entry to the list of patient todos. This list of todos can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
 command.
 
-**Note:** If the person indicated by the INDEX must be a `Patient`.
+<div markdown="span" class="alert alert-info">
+
+:information_source: The person indicated by the INDEX must be a `Patient`.
+
+</div>
 
 **Format: `addpattodo INDEX td/TODO [td/TODO]...`**
 
@@ -386,7 +417,12 @@ command.
 Deletes the specified entry in the list of patient todos. This list of todos can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
 command.
 
-**Note:** If the person indicated by the PATIENT_INDEX must be a `Patient`.
+<div markdown="span" class="alert alert-info">
+
+:information_source: The person indicated by the PATIENT_INDEX must be a `Patient`.
+
+</div>
+<br>
 
 **Format: `delpattodo PATIENT_INDEX TODO_INDEX`**
 
