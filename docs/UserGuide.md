@@ -13,9 +13,34 @@ reliably than traditional GUI based apps.
 
 ## Using this guide 
 {: .no_toc}
+
 * If you are setting up for the first time, please have a look at our [Quick Start](#quick-start) section.
 * If you are unsure how to use Patientist, the [Features](#features) section might be a good place to start.
 * For ease of navigation, clicking the hyperlinks at the bottom of each section to go back to the table of contents.
+
+### Overview of symbols
+{: .no_toc}
+
+We will be using certain symbols throughout the User Guide, so here is a quick summary of what the symbols mean:
+
+<div markdown="span" class="alert alert-info">
+
+:information_source: Information that is good for you to know but not necessary.
+
+</div>
+
+<div markdown="span" class="alert alert-success">
+
+:bulb: Tips and tricks to upgrade your experience using Patienist.
+
+</div>
+
+<div markdown="span" class="alert alert-danger">
+
+:warning: Warnings so that Patientist works as intended.
+
+</div>
+
 
 ___
 
@@ -38,7 +63,7 @@ ___
 
 --------------------------------------------------------------------------------------------------------------------
 
-# Features
+## Features
 
 ## Notes about formatting 
 {: .no_toc}
