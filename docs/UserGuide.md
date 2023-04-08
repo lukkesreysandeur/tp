@@ -84,9 +84,9 @@ ___
 ## Adding/Removing Wards
 Patientist is meant to help reflect the physical state of your hospital, so if you are a new user and would like to update Patientist with the wards, here's what you do:
 
-Let's say the hospital has just added a new ward, with the name "Block 3 Ward B", and you would like to add it to Patientist. 
+Let's say the hospital has just added a new ward, with the name "Block B Ward 3", and you would like to add it to Patientist. 
 
-**Command entered**: [`addward n/Block 3 Ward B`](#addward)
+**Command entered**: [`addward n/Block B Ward 3`](#addward)
 
 This is the message that you should see indicating that the ward has been added to the system.
 
@@ -95,12 +95,12 @@ This is the message that you should see indicating that the ward has been added 
 <center>Message shown after entering addward</center> 
 <br>
 
-This means that the ward "Block 3 Ward B" has been added to Patientist.
+This means that the ward "Block B Ward 3" has been added to Patientist.
 
 Now let's say you accidentally added the wrong ward, and it should have been "Block 3 Ward A" instead.
 Well, its just as simple to remove the ward. Simply use the `delward` command with the name of the ward to be removed.
 
-**Command entered**: [`delward n/Block 3 Ward B`](#delward)
+**Command entered**: [`delward n/Block B Ward 3`](#delward)
 
 A similar looking message should appear indicating that the ward was successfully removed.
 
@@ -130,6 +130,8 @@ Creates an empty ward with the specified `WARD_NAME`.
 ---
 
 ### Deleting a ward from the system: delward
+{: #delward}
+
 This deletes the `WARD_NAME` specified from the system. The ward being deleted must be empty for this command to be successfully executed.
 
 <div markdown="span" class="alert alert-danger">
@@ -148,14 +150,33 @@ This deletes the `WARD_NAME` specified from the system. The ward being deleted m
 ---
 
 ## Adding People
-These commands can be used to add people to a specified ward in the Patientist system.
+Now that Patientist has all the wards entered into the system, we can start to add the people to the system.
+
+Consider that a new patient, John Doe, has just been admitted into ward "Block B Ward 2". 
+
+**Command entered**: [`addpat n/John Doe id/A12345B w/Block B Ward 2 p/98765432 e/johnd@example.com a/311, Clementi Ave 2, #02-25 pr/LOW`](#addpat)
+
+This will the message that you should see:
+
+![addpat.png](images/addpat.png)
+
+<center>Message shown when successfully adding patient.</center>
+
+A similar command can also be used to add staff members, to make it easier to keep track of the staff as well.
+
+**Command entered**: ['addstf n/Mary Jane id/A17625H w/Block B Ward 2 p/96421234 e/mj@example.com a/789 Hospice St, #06-16'](#addstf)
+
+The message shown will similarly reflect the staff member added along with their entered details.
 
 <div markdown="span" class="alert alert-warning">
 
 :warning: The ward specified must exist first. If it has not been added, perhaps you might want to check out [`addward`](#addward) first.
 
 </div>
+
 ### Adding a patient: addpat
+{: #addpat}
+
 Adds a new patient to the system, and places them in the `WARD_NAME` assigned.
 Tags attached to a user are meant to be short notes that do not fit into any other category of patient details that can be added.
 
@@ -165,12 +186,18 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 
 </div>
 
-**Format: `addpat n/PATIENT_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME pr/PRIORITY [t/TAG]...`**
+<div markdown="span" class="alert alert-info">
 
+:information_source: 
 `PRIORITY` can take values of either `LOW`, `MEDIUM` or `HIGH`. Please only enter one of these 3 values (case-sensitive).\
 `ID_NUMBER` should be unique to each patient. This is not case-sensitive. A123456789B is identical to a123456789b.
 **This input will be capitalised automatically.**\
 `PATIENT_NAME` need not be unique.
+
+</div>
+
+
+**Format: `addpat n/PATIENT_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME pr/PRIORITY [t/TAG]...`**
 
 **Examples:**
 **`addpat n/John Doe id/A12345B w/Block B Ward 2 p/98765432 e/johnd@example.com a/Clementi Ave 2, #02-25 pr/LOW`**
@@ -180,12 +207,23 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 ---
 
 ### Adding a staff member: addstf
+{: #addstf}
+
 Assigns specified `STAFF_NAME` to the specified `WARD_NAME`.
 The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
 <div markdown="span" class="alert alert-danger">
 
 :warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+
+</div>
+
+<div markdown="span" class="alert alert-info">
+
+:information_source:
+`ID_NUMBER` should be unique to each staff member. This is not case-sensitive. A123456789B is identical to a123456789b.
+**This input will be capitalised automatically.**\
+`STAFF_NAME` need not be unique.
 
 </div>
 
@@ -200,7 +238,7 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 ---
 
 ## Deleting people
-These commands are used to remove people from a ward in the Patientist system.
+Now let's imagine that a patient is being discharged from the hospital
 
 ### Deleting a person from the system based on list on GUI: delete
 {: #delete}
