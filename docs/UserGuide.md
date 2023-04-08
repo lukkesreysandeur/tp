@@ -169,7 +169,7 @@ This will the message that you should see:
 
 A similar command can also be used to add staff members, to make it easier to keep track of the staff as well.
 
-**Command entered**: ['addstf n/Mary Jane id/A17625H w/Block B Ward 2 p/96421234 e/mj@example.com a/789 Hospice St, #06-16'](#addstf)
+**Command entered**: [`addstf n/Mary Jane id/A17625H w/Block B Ward 2 p/96421234 e/mj@example.com a/789 Hospice St, #06-16`](#addstf)
 
 The message shown will similarly reflect the staff member added along with their entered details.
 
@@ -328,7 +328,27 @@ This will remove the staff from his or her assigned ward as well.
 ---
 
 ## Listing information
-These commands can be used to list people and wards. 
+Sometimes, you may want to have a look at all the staff, or all the wards currently stored in the system. This is also easily done using the list commands.
+
+If you would like to view all the people, patients or staff, you can use [`list`](#list), [`lspat`](#lspat), or [`lsstf`](#lsstf) respectively.
+
+All three commands would show a message that looks like this, and update the GUI accordingly.
+
+![lspat.png](images/lspat.png)
+
+<center>Message shown upon listing people</center>
+<br>
+
+If you would like to have an overview of the wards, that is also possible using [`lsward`](#lsward), which will display the GUI as shown below.
+
+![lsward.png](images/lsward.png)
+
+<center>Message shown and GUI update upon listing wards</center>
+<br>
+
+If perhaps you would like to see all the people in a particular ward, then the ward specific list commands, 
+[`lswardpat`](#lswardpat) and [`lswardstf`](#lswardstf) can be used for patients and staff respectively.
+
 
 <div markdown="span" class="alert alert-success">
 
@@ -336,7 +356,10 @@ These commands can be used to list people and wards.
 
 </div> 
 
+---
 ### Listing all persons: list
+{: #list}
+
 Lists all the peoples’ names and corresponding ID, displaying any tags attached to them and showing the ward they are in.
 
 **Format: `list`**
@@ -344,8 +367,9 @@ Lists all the peoples’ names and corresponding ID, displaying any tags attache
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-
 ### Listing all patients: lspat
+{: #lspat}
+
 Lists all the patients’ names and corresponding patient ID, displaying any tags attached to them and showing the ward they are in.
 
 **Format: `lspat`**
@@ -356,8 +380,9 @@ Lists all the patients’ names and corresponding patient ID, displaying any tag
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-
 ### Listing staff members: lsstf
+{: #lsstf}
+
 Lists staff members’ names and the name of the ward they are assigned to.
 
 **Format: `lsstf`**
@@ -369,8 +394,9 @@ can appear more than once if they are assigned to more than 1 ward.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-
 ### Listing the names of all wards: lsward
+{: #lsward}
+
 Lists all existing wards on the GUI. Only ward names will be displayed.
 
 **Format: `lsward`**
@@ -379,6 +405,8 @@ Lists all existing wards on the GUI. Only ward names will be displayed.
 
 ---
 ### Listing all patients in a particular ward: lswardpat
+{: #lswardpat}
+
 Lists all the patients found in the given `WARD_NAME`.
 
 **Format: `lswardpat WARD_NAME`**
@@ -388,8 +416,9 @@ Lists all the patients found in the given `WARD_NAME`.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-
 ### Listing all staff in a particular ward: lswardstf
+{: #lswardstf}
+
 Lists all the staff found in the given `WARD_NAME`.
 
 **Format: `lswardstf WARD_NAME`**
