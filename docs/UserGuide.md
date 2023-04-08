@@ -101,8 +101,9 @@ Now let's say you accidentally added the wrong ward, and it should have been "Bl
 Well, its just as simple to remove the ward. Simply use the [`delward`](#delward) command with the name of the ward to be removed.
 A similar looking message should appear indicating that the ward was successfully removed. Thereafter, the correct ward can be added to Patientist.
 
----
+[Go back to [Table of Contents](#table-of-contents)]
 
+---
 ### Adding a ward to the system: addward
 {: #addward}
 
@@ -173,6 +174,8 @@ The message shown will similarly reflect the staff member added along with their
 :warning: The ward specified must exist first. If it has not been added, perhaps you might want to check out [`addward`](#addward) first.
 
 </div>
+
+[Go back to [Table of Contents](#table-of-contents)]
 
 ___
 ### Adding a patient: addpat
@@ -261,6 +264,8 @@ However, it is easy to imagine if this could be quite difficult to do when there
 You can simply remove patients using [`delpat`](#delpat), and remove staff members using [`delstf`](#delstf), by just specifying their unique ID numbers.
 Both of these commands would result in a similar success message as the `delete` command shown above.
 
+[Go back to [Table of Contents](#table-of-contents)]
+
 ---
 
 ### Deleting a person from the system based on list on GUI: delete
@@ -342,6 +347,8 @@ If perhaps you would like to see all the people in a particular ward, then the w
 :bulb: List updates the GUI, which can affect index-based commands such as [`delete`](#delete)
 
 </div> 
+
+[Go back to [Table of Contents](#table-of-contents)]
 
 ---
 ### Listing all persons: list
@@ -429,6 +436,8 @@ which allows you to find people based on name or ID number. The [`find`](#find) 
 
 If this find is too general, or if you only remember the ID numbers, we also offer the commands [`findpat`](#findpat) and [`findstf`](#findstf), which allow you 
 to find either patients or staff using their name or their ID numbers.
+
+[Go back to [Table of Contents](#table-of-contents)]
 
 ---
 ### Finding a person: find
@@ -523,6 +532,8 @@ we can use the [`trfward`] command.
 <center><u>Message showm upon transferring a person to another ward.</u></center>
 <br>
 
+[Go back to [Table of Contents](#table-of-contents)]
+
 ---
 ### Update particulars of a person: edit
 {: #edit}
@@ -573,6 +584,8 @@ along with the index and the task to be done to add to a patient's todo list.
 
 Similarly, once the todo has been completed, you can remove the todo using [`delpattodo`] with the index of the patient 
 and the todo as shown in the todo list.
+
+[Go back to [Table of Contents](#table-of-contents)]
 
 ---
 ### Adding patient todo: addpattodo
@@ -628,6 +641,8 @@ to a patient using the [`addpatstatus`](#addpatstatus) command, with the status 
 Conversely, if a patient's status is no longer relevant, then we can just as easily remove the status detail using
 [`delpatstatus`](#delpatstatus), along with the index of the patient and the index of the status to be removed.
 
+[Go back to [Table of Contents](#table-of-contents)]
+
 ---
 ### Adding patient status: addpatstatus
 {: #addpatstatus}
@@ -682,6 +697,8 @@ in the system, say for instance, a patient by the name of Roy.
 
 As seen from the image above, the details of the person are shown in the secondary viewing panel on the right side, 
 thereby making it more convenient to look up the full details of a person.
+
+[Go back to [Table of Contents](#table-of-contents)]
 
 ---
 ### Viewing the details of a specific person: view
@@ -770,3 +787,5 @@ Shows a popup explaining how to access the user guide, which is the help page.
 [Go back to [Table of Contents](#table-of-contents)]
 
 # Glossary
+
+
