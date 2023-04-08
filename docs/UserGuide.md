@@ -98,10 +98,7 @@ This is the message that you should see indicating that the ward has been added 
 This means that the ward "Block B Ward 3" has been added to Patientist.
 
 Now let's say you accidentally added the wrong ward, and it should have been "Block 3 Ward A" instead.
-Well, its just as simple to remove the ward. Simply use the `delward` command with the name of the ward to be removed.
-
-**Command entered**: [`delward n/Block B Ward 3`](#delward)
-
+Well, its just as simple to remove the ward. Simply use the [`delward`](#delward) command with the name of the ward to be removed.
 A similar looking message should appear indicating that the ward was successfully removed. Thereafter, the correct ward can be added to Patientist.
 
 ---
@@ -168,9 +165,7 @@ This will the message that you should see:
 <br>
 
 A similar command can also be used to add staff members, to make it easier to keep track of the staff as well.
-
-**Command entered**: [`addstf n/Mary Jane id/A17625H w/Block B Ward 2 p/96421234 e/mj@example.com a/789 Hospice St, #06-16`](#addstf)
-
+All that you need to do is enter the command [`addstf`](#addstf) with the staff's details to add them to the system.
 The message shown will similarly reflect the staff member added along with their entered details.
 
 <div markdown="span" class="alert alert-warning">
@@ -195,7 +190,7 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 <div markdown="span" class="alert alert-info">
 
 :information_source:
-`PRIORITY` can take values of either `LOW`, `MEDIUM` or `HIGH`. Please only enter one of these 3 values (case-sensitive).\
+`PRIORITY` can take values of either `LOW`, `MEDIUM` or `HIGH`. Please only enter one of these 3 values (case-sensitive).
 <br>
 `ID_NUMBER` should be unique to each patient. This is not case-sensitive. A123456789B is identical to a123456789b.
 **This input will be capitalised automatically.**
@@ -264,14 +259,7 @@ A message looking like this should be shown, indicating that the patient has bee
 <br>
 
 However, it is easy to imagine if this could be quite difficult to do when there are many people in the system. Well not to worry! 
-We also support deleting people using their unique ID numbers. The following command would delete a patient with the ID A12345A.
-
-**Command entered**: [`delpat id/A12345A`](#delpat)
-
-Should there be a need, we also offer the same functionality to remove staff using their ID numbers.
-
-**Command entered**: [`delstf id/G74165Y`](#delstf)
-
+You can simply remove patients using [`delpat`](#delpat), and remove staff members using [`delstf`](#delstf), by just specifying their unique ID numbers.
 Both of these commands would result in a similar success message as the `delete` command shown above.
 
 ---
@@ -430,13 +418,36 @@ Lists all the staff found in the given `WARD_NAME`.
 ---
 
 ## Finding people
-These commands help you to find exactly who you are looking for.
+Okay, but what if you are looking for one person in particular? To make things easier for you, we have added the find functionality, 
+which allows you to find people based on name or ID number. The [`find`](#find) command will bring up a list of people whose name matches the keywords given.
 
+**Command entered**: [`find Alex Irfan`](#find)
+
+![find.png](images/find.png)
+
+<center>Message and GUI shown after finding Alex and Irfan</center>
+<br>
+
+If this find is too general, or if you only remember the ID numbers, we also offer the commands [`findpat`](#findpat) and [`findstf`](#findstf, which allow you 
+to find either patients or staff using their name or their ID numbers.
+
+---
 ### Finding a person: find
+{: #find}
 
 Finds all persons with names containing any of the specified keywords and displays them on the GUI.
 
-**Warning: `NAME` is case-insensitive.** Using an argument `Alice` will match names `aLice`, `alice`, `ALICE` etc.
+<div markdown="span" class="alert alert-info">
+
+:information_source: `find` will list any person whose name matches the given keywords.
+
+</div>
+
+<div markdown="span" class="alert alert-success">
+
+:bulb: **`NAME` is case-insensitive.** Using an argument `Alice` will match names `aLice`, `alice`, `ALICE` etc.
+
+</div>
 
 **Format: `find NAME`**
 
@@ -447,6 +458,7 @@ Finds all persons with names containing any of the specified keywords and displa
 ---
 
 ### Finding a patient by ID number: findpat
+{: #findpat}
 
 Finds all patients with names containing any of the specified keywords or id matching the specified keyword and displays
 them on the GUI.
@@ -467,6 +479,7 @@ them on the GUI.
 
 ---
 ### Finding a staff by ID number: findstf
+{: #findstf}
 
 Finds all staff with names containing any of the specified keywords or id matching the specified keyword and displays
 them on the GUI.
