@@ -10,6 +10,9 @@ reliably than traditional GUI based apps.
 ![MainScreen](images/Ui.png)
 
 <center>The GUI displayed after the app is launched.</center>
+
+<div style="page-break-after: always;"></div>
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Using this guide 
@@ -66,12 +69,16 @@ ___
 
 # Features
 
-## Notes about formatting 
-{: .no_toc}
+<div markdown="block" class="alert alert-info">
+
+:information_source: **Notes about formatting**<br>
+
 * Words in UPPER_CASE are user supplied _arguments_, e.g. `addpat n/NAME`: `NAME` is an _argument_, and the command can be used as add `n/John Doe`
 * Items in square brackets are optional _arguments_, e.g. `addpat n/NAME [t/TAG]` can be used as `addpat n/John Doe t/urgent` or simply as `addpat n/John Doe`
 * Items with … after them can be specified 0 or more times, e.g. `[t/TAG]...` means it is valid to not include a tag, or you can include 1 or more `t/TAG` expressions
 * Extra _arguments_ for commands that take in exactly 0 _arguments_ will be ignored, e.g. `help 0` will bring up the help window as with just `help`
+
+</div>
 
 ---
 
