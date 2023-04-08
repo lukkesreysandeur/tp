@@ -130,15 +130,15 @@ Creates an empty ward with the specified `WARD_NAME`.
 
 This deletes the `WARD_NAME` specified from the system. The ward being deleted must be empty for this command to be successfully executed.
 
-<div markdown="span" class="alert alert-danger">
-
-:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
-
-</div>
-
 <div markdown="span" class="alert alert-info">
 
 :information_source: The specified ward needs to be empty before deletion.
+
+</div>
+
+<div markdown="span" class="alert alert-danger">
+
+:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
 
 </div>
 
@@ -161,7 +161,7 @@ This will the message that you should see:
 
 ![addpat.png](images/addpat.png)
 
-<center>Message shown when successfully adding patient.</center>
+<center><u>Message shown when successfully adding patient.</u></center>
 <br>
 
 A similar command can also be used to add staff members, to make it easier to keep track of the staff as well.
@@ -181,12 +181,6 @@ ___
 Adds a new patient to the system, and places them in the `WARD_NAME` assigned.
 Tags attached to a user are meant to be short notes that do not fit into any other category of patient details that can be added.
 
-<div markdown="span" class="alert alert-danger">
-
-:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`.
-
-</div>
-
 <div markdown="span" class="alert alert-info">
 
 :information_source:
@@ -199,6 +193,11 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 
 </div>
 
+<div markdown="span" class="alert alert-danger">
+
+:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`.
+
+</div>
 
 **Format: `addpat n/PATIENT_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME pr/PRIORITY [t/TAG]...`**
 
@@ -215,12 +214,6 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 Assigns specified `STAFF_NAME` to the specified `WARD_NAME`.
 The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
-<div markdown="span" class="alert alert-danger">
-
-:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
-
-</div>
-
 <div markdown="span" class="alert alert-info">
 
 :information_source:
@@ -228,6 +221,12 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 **This input will be capitalised automatically.**
 <br>
 `STAFF_NAME` need not be unique.
+
+</div>
+
+<div markdown="span" class="alert alert-danger">
+
+:warning: **`WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
 
 </div>
 
@@ -255,7 +254,7 @@ A message looking like this should be shown, indicating that the patient has bee
 
 ![delete.png](images/delete.png)
 
-<center>The message shown when a person is successfully deleted.</center>
+<center><u>The message shown when a person is successfully deleted.</u></center>
 <br>
 
 However, it is easy to imagine if this could be quite difficult to do when there are many people in the system. Well not to worry! 
@@ -324,14 +323,14 @@ All three commands would show a message that looks like this, and update the GUI
 
 ![lspat.png](images/lspat.png)
 
-<center>Message shown upon listing people</center>
+<center><u>Message shown upon listing people.</u></center>
 <br>
 
 If you would like to have an overview of the wards, that is also possible using [`lsward`](#lsward), which will display the GUI as shown below.
 
 ![lsward.png](images/lsward.png)
 
-<center>Message shown and GUI update upon listing wards</center>
+<center><u>Message shown and GUI update upon listing wards.</u></center>
 <br>
 
 If perhaps you would like to see all the people in a particular ward, then the ward specific list commands, 
@@ -425,10 +424,10 @@ which allows you to find people based on name or ID number. The [`find`](#find) 
 
 ![find.png](images/find.png)
 
-<center>Message and GUI shown after finding Alex and Irfan</center>
+<center><u>Message and GUI shown after finding Alex and Irfan.</u></center>
 <br>
 
-If this find is too general, or if you only remember the ID numbers, we also offer the commands [`findpat`](#findpat) and [`findstf`](#findstf, which allow you 
+If this find is too general, or if you only remember the ID numbers, we also offer the commands [`findpat`](#findpat) and [`findstf`](#findstf), which allow you 
 to find either patients or staff using their name or their ID numbers.
 
 ---
@@ -463,13 +462,13 @@ Finds all persons with names containing any of the specified keywords and displa
 Finds all patients with names containing any of the specified keywords or id matching the specified keyword and displays
 them on the GUI.
 
-**Format: `findpat [n/NAME] [id/ID_NUMBER]`**
-
 <div markdown="span" class="alert alert-info">
 
 :information_source: Either NAME or ID_NUMBER must be present.
 
 </div>
+
+**Format: `findpat [n/NAME] [id/ID_NUMBER]`**
 
 **Examples:**
 **`findpat n/Alex Bob Charles`** Finds all patients with names containing Alex, Bob or Charles.\
@@ -484,13 +483,13 @@ them on the GUI.
 Finds all staff with names containing any of the specified keywords or id matching the specified keyword and displays
 them on the GUI.
 
-**Format: `findstf [n/NAME] [id/ID_NUMBER]`**
-
 <div markdown="span" class="alert alert-info">
 
 :information_source: Either NAME or ID_NUMBER must be present.
 
 </div>
+
+**Format: `findstf [n/NAME] [id/ID_NUMBER]`**
 
 **Examples:**
 **`findstf n/Alex Bob Charles`** Finds all staff with names containing Alex, Bob or Charles.\
@@ -501,9 +500,33 @@ them on the GUI.
 ---
 
 ## Editing a person's information
-These commands can help to edit a person's information if it had been keyed in incorrectly or if there is an update that needs to be reflected in Patientist.
+Now imagine that a person's information has been keyed incorrectly, or if a person has been transferred to another ward, 
+it would be pretty cumbersome to have to retype all that information. Luckily, we can use the editing commands to easily remedy this.
 
+Let's imagine that Alex Yeo's name had been mistakenly spelt as Alex Yeoh. To change it to the correct spelling, we can make use 
+of the [`edit`](#edit) command, with the index of the person, and the information to change.
+
+**Command entered**: [`edit 3 n/Alex Yeo`](#edit)
+
+![edit.png](images/edit.png)
+
+<center><u>Message shown upon editing a person's details.</u></center>
+<br>
+
+Now let's say that the same patient Alex Yeo is being transferred to another ward, Block B Ward 2. To make this change, 
+we can use the [`trfward`] command.
+
+**Command entered**: [`trfward 3 w/Block B Ward 2`](#trfward)
+
+![trfward.png](images/trfward.png)
+
+<center><u>Message showm upon transferring a person to another ward.</u></center>
+<br>
+
+---
 ### Update particulars of a person: edit
+{: #edit}
+
 This overwrites the specified person’s particulars with new particulars. This command works on both patients and staff.
 
 **Format: `edit INDEX [n/PATIENT_NAME] [t/TAG] [p/PHONE_NUMBER] [a/ADDRESS] [e/EMAIL]`**
@@ -517,6 +540,8 @@ This overwrites the specified person’s particulars with new particulars. This 
 ---
 
 ### Transferring a patient between wards: trfward
+{: #trfward}
+
 This moves the patient at `INDEX` position on the list to the specified `WARD_NAME`. `WARD_NAME` must already exist.
 
 <div markdown="span" class="alert alert-danger">
@@ -535,10 +560,14 @@ This moves the patient at `INDEX` position on the list to the specified `WARD_NA
 ---
 
 ## Adding/removing todos to a patient
-These commands can add or remove todos with regards to a specified patient.
+
+
+
 
 ### Adding patient todo: addpattodo
-Adds an entry to the list of patient todos. This list of todos can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
+{: #addpattodo}
+
+Adds an entry to the list of patient todos. This list of todos can be viewed by the [view](#view)
 command.
 
 <div markdown="span" class="alert alert-info">
@@ -555,7 +584,9 @@ command.
 
 ---
 ### Deleting patient todo: delpattodo
-Deletes the specified entry in the list of patient todos. This list of todos can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
+{: #delpattodo}
+
+Deletes the specified entry in the list of patient todos. This list of todos can be viewed by the [view](#view)
 command.
 
 <div markdown="span" class="alert alert-info">
@@ -563,7 +594,6 @@ command.
 :information_source: The person indicated by the PATIENT_INDEX must be a `Patient`.
 
 </div>
-<br>
 
 **Format: `delpattodo PATIENT_INDEX TODO_INDEX`**
 
@@ -577,6 +607,8 @@ command.
 These commands are used to add or remove status conditions from a specified patient.
 
 ### Adding patient status: addpatstatus
+{: #addpatstatus}
+
 Adds an entry to the list of patient statuses. This list of statuses can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
 command.
 
@@ -590,6 +622,8 @@ command.
 
 ---
 ### Deleting patient status: delpatstatus
+{: #delpatstatus}
+
 Deletes the specified entry in the list of patient statuses. This list of statuses can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
 command.
 
@@ -604,6 +638,8 @@ command.
 ---
 
 ## Viewing the details of a specific person: view
+{: #view}
+
 Lists the full detail of a specific person, including their name, patient ID and tags in the main window.
 
 **Format: `view INDEX`**
@@ -616,6 +652,7 @@ Lists the full detail of a specific person, including their name, patient ID and
 ---
 
 ## Clearing the patientist: clear
+{: #clear}
 
 Clears the current session of patientist and restores it to empty state.
 
