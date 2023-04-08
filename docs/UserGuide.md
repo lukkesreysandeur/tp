@@ -84,26 +84,27 @@ ___
 ## Adding/Removing Wards
 Patientist is meant to help reflect the physical state of your hospital, so if you are a new user and would like to update Patientist with the wards, here's what you do:
 
-Scenario: 
-
 Let's say the hospital has just added a new ward, with the name "Block 3 Ward B", and you would like to add it to Patientist. 
 
-Command entered: [addward](#addward) n/Block 3 Ward B
+**Command entered**: [`addward n/Block 3 Ward B`](#addward)
 
 This is the message that you should see indicating that the ward has been added to the system.
 
 ![addward.png](images/addward.png)
 
 <center>Message shown after entering addward</center> 
+<br>
 
 This means that the ward "Block 3 Ward B" has been added to Patientist.
 
 Now let's say you accidentally added the wrong ward, and it should have been "Block 3 Ward A" instead.
 Well, its just as simple to remove the ward. Simply use the `delward` command with the name of the ward to be removed.
 
-Command entered: [delward](#delward) n/Block 3 Ward B
+**Command entered**: [`delward n/Block 3 Ward B`](#delward)
 
 A similar looking message should appear indicating that the ward was successfully removed.
+
+Thereafter the correct ward can be added to Patientist.
 
 
 ### Adding a ward to the system: addward
