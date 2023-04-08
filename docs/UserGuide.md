@@ -1,8 +1,7 @@
 ---
 layout: page
-title: User Guide
+title: Patientist User Guide
 ---
-# Patientist User Guide
 Patientist is a desktop app used for managing patients and staff within a medical facility. This application is optimised
 for use via a Command Line Interface (CLI), while still having a Graphical User Interface (GUI) for users to fall back
 on. If you are a strong typist and are familiar with the system, Patientist can get your tasks done faster and more
@@ -23,6 +22,8 @@ ___
 * Table of Contents
 {:toc}
 
+[clear](#clear)
+
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -40,23 +41,16 @@ ___
 # Features
 
 ## Notes about formatting
-* Words in UPPER_CASE are user supplied parameters, e.g. `addpat n/NAME`: `NAME` is a parameter, and the command can be used as add `n/John Doe`
-* Items in square brackets are optional parameters, e.g. `addpat n/NAME [t/TAG]` can be used as `addpat n/John Doe t/urgent` or simply as `addpat n/John Doe`
+* Words in UPPER_CASE are user supplied _arguments_, e.g. `addpat n/NAME`: `NAME` is an _argument_, and the command can be used as add `n/John Doe`
+* Items in square brackets are optional _arguments_, e.g. `addpat n/NAME [t/TAG]` can be used as `addpat n/John Doe t/urgent` or simply as `addpat n/John Doe`
 * Items with … after them can be specified 0 or more times, e.g. `[t/TAG]...` means it is valid to not include a tag, or you can include 1 or more `t/TAG` expressions
-* Extraneous parameters for commands that take in exactly 0 parameters will be ignored
-
----
-
-## Viewing help: help
-Shows a popup explaining how to access the user guide, which is the help page.
-
-**Format: `help`**
-
-[Go back to [Table of Contents](#table-of-contents)]
+* Extra _arguments_ for commands that take in exactly 0 _arguments_ will be ignored, e.g. `help 0` will bring up the help window as with just `help`
 
 ---
 
 ## Clearing the patientist: clear
+{: #clear}
+
 Clears the current session of patientist and restores it to empty state.
 
 **Format: `clear`**
@@ -368,6 +362,15 @@ This moves the patient at `INDEX` position on the list to the specified `WARD_NA
 Exits the program.
 
 **Format: `exit`**
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+## Viewing help: help
+Shows a popup explaining how to access the user guide, which is the help page.
+
+**Format: `help`**
 
 [Go back to [Table of Contents](#table-of-contents)]
 
