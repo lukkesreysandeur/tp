@@ -560,10 +560,21 @@ This moves the patient at `INDEX` position on the list to the specified `WARD_NA
 ---
 
 ## Adding/removing todos to a patient
+As hospital staff, I imagine that you will have to keep track of certain tasks to be done with regards to certain patients, so 
+we have also added support for personal todo lists for each patient. You can use the [`addpattodo`](#addpattodo) command, 
+along with the index and the task to be done to add to a patient's todo list.
 
+**Command entered**: [`addpattodo 3 td/Dialysis at 2pm`]
 
+![addpattodo.png](images/addpattodo.png)
 
+<center><u>Message shown upon adding a todo for a patient.</u></center>
+<br>
 
+Similarly, once the todo has been completed, you can remove the todo using [`delpattodo`] with the index of the patient 
+and the todo as shown in the todo list.
+
+---
 ### Adding patient todo: addpattodo
 {: #addpattodo}
 
@@ -604,15 +615,31 @@ command.
 ---
 
 ## Adding/removing a patient's status
-These commands are used to add or remove status conditions from a specified patient.
+Patients are also bound to have some status details which may be important for staff to view. You can add a status detail 
+to a patient using the [`addpatstatus`](#addpatstatus) command, with the status detail you would like to add.
 
+**Command entered**: [`addpatstatus 3 s/Fall risk`]
+
+![addpatstatus.png](images/addpatstatus.png)
+
+<center><u>Message shown upon adding a status detail to a patient.</u></center>
+<br>
+
+Conversely, if a patient's status is no longer relevant, then we can just as easily remove the status detail using
+[`delpatstatus`](#delpatstatus), along with the index of the patient and the index of the status to be removed.
+
+---
 ### Adding patient status: addpatstatus
 {: #addpatstatus}
 
 Adds an entry to the list of patient statuses. This list of statuses can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
 command.
 
-**Note:** If the person indicated by the INDEX must be a `Patient`.
+<div markdown="span" class="alert alert-info">
+
+:information_source: The person indicated by the PATIENT_INDEX must be a `Patient`.
+
+</div>
 
 **Format: `addpatstatus INDEX s/STATUS [s/STATUS]...`**
 
@@ -627,7 +654,11 @@ command.
 Deletes the specified entry in the list of patient statuses. This list of statuses can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
 command.
 
-**Note:** If the person indicated by the PATIENT_INDEX must be a `Patient`.
+<div markdown="span" class="alert alert-info">
+
+:information_source: The person indicated by the PATIENT_INDEX must be a `Patient`.
+
+</div>
 
 **Format: `delpatstatus PATIENT_INDEX STATUS_INDEX`**
 
@@ -637,7 +668,23 @@ command.
 
 ---
 
-## Viewing the details of a specific person: view
+## Viewing all details of a person
+So far, we have only been using the list to view information pertaining to certain people, but what if you want to view 
+all the details of a person? Well fret not, because we can use the [`view`] command to see all the data related to a person 
+in the system, say for instance, a patient by the name of Roy.
+
+**Command entered**: [`view 10`](#view)
+
+![view.png](images/view.png)
+
+<center><u>Message and UI shown after using view</u></center>
+<br>
+
+As seen from the image above, the details of the person are shown in the secondary viewing panel on the right side, 
+thereby making it more convenient to look up the full details of a person.
+
+---
+### Viewing the details of a specific person: view
 {: #view}
 
 Lists the full detail of a specific person, including their name, patient ID and tags in the main window.
@@ -722,3 +769,4 @@ Shows a popup explaining how to access the user guide, which is the help page.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
+# Glossary
