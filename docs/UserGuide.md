@@ -9,6 +9,7 @@ reliably than traditional GUI based apps.
 
 ![MainScreen](images/Ui.png)
 
+<center>The GUI displayed after the app is launched.</center>
 --------------------------------------------------------------------------------------------------------------------
 
 ## Using this guide 
@@ -63,7 +64,7 @@ ___
 
 --------------------------------------------------------------------------------------------------------------------
 
-## Features
+# Features
 
 ## Notes about formatting 
 {: .no_toc}
@@ -112,7 +113,11 @@ This deletes the `WARD_NAME` specified from the system. The ward being deleted m
 ## Adding People
 These commands can be used to add people to a specified ward in the Patientist system.
 
+<div markdown="span" class="alert alert-warning">
+
 :warning: The ward specified must exist first. If it has not been added, perhaps you might want to check out [`addward`](#addward) first.
+
+</div>
 
 ### Adding a patient: addpat
 Adds a new patient to the system, and places them in the `WARD_NAME` assigned.
@@ -158,7 +163,11 @@ These commands are used to remove people from a ward in the Patientist system.
 
 This deletes the person specified by `INDEX`. This index is the number beside the person on the list of persons on screen.
 
+<div markdown="span" class="alert alert-warning">
+
 :warning: `delete` does not work with ward, so calling the command when the wards are shown will result in nothing being done.
+
+</div>
 
 **Format: `delete INDEX`**
 
@@ -199,7 +208,11 @@ This will remove the staff from his or her assigned ward as well.
 ## Listing information
 These commands can be used to list people and wards. 
 
-:information-source: List updates the GUI, which can affect index-based commands such as [`delete`](#delete)
+<div markdown="span" class="alert alert-info">
+
+:information_source: List updates the GUI, which can affect index-based commands such as [`delete`](#delete)
+
+</div> 
 
 ### Listing all persons: list
 Lists all the peoples’ names and corresponding ID, displaying any tags attached to them and showing the ward they are in.
@@ -230,7 +243,7 @@ Lists staff members’ names and the name of the ward they are assigned to.
 
 **Examples:**
 **`lsstf`** will list all staff assigned to each ward on the GUI. The lists will be grouped according to ward, and each staff
-can appear more than once if they are assigned to more than 1 ward.\
+can appear more than once if they are assigned to more than 1 ward.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -456,7 +469,7 @@ Shows a popup explaining how to access the user guide, which is the help page.
 [Go back to [Table of Contents](#table-of-contents)]
 
 --------------------------------------------------------------------------------------------------------------------
-# Command summary
+# Command Summary
 
 | Action                                                                                                        | Format                                                                                               | Examples                                                                                                       |
 |---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
