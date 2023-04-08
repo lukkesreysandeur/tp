@@ -21,6 +21,7 @@ ___
 
 ## Table of Contents 
 {: .no_toc}
+
 * Table of Contents
 {:toc}
 
@@ -39,7 +40,8 @@ ___
 
 # Features
 
-## Notes about formatting
+## Notes about formatting 
+{: .no_toc}
 * Words in UPPER_CASE are user supplied _arguments_, e.g. `addpat n/NAME`: `NAME` is an _argument_, and the command can be used as add `n/John Doe`
 * Items in square brackets are optional _arguments_, e.g. `addpat n/NAME [t/TAG]` can be used as `addpat n/John Doe t/urgent` or simply as `addpat n/John Doe`
 * Items with … after them can be specified 0 or more times, e.g. `[t/TAG]...` means it is valid to not include a tag, or you can include 1 or more `t/TAG` expressions
@@ -47,29 +49,47 @@ ___
 
 ---
 
-## Clearing the patientist: clear
-{: #clear}
+## Adding/Removing Wards
+These commands can add or delete wards to reflect the physical wards in the hospital.
 
-Clears the current session of patientist and restores it to empty state.
+### Adding a ward to the system: addward
+{: #addward}
 
-**Format: `clear`**
+Creates an empty ward with the specified `WARD_NAME`.
 
-[Go back to [Table of Contents](#table-of-contents)]
+**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
 
-
----
-## Viewing the details of a specific person: view
-Lists the full detail of a specific person, including their name, patient ID and tags in the main window.
-
-**Format: `view INDEX`**
+**Format: `addward n/WARD_NAME`**
+`WARD_NAME` must be unique and cannot be the same as any existing name. This field is case-sensitive.
 
 **Examples:**
-**`view 1`** will display all the information associated with the 1st person shown on the GUI.
+**`addward n/block B ward 2`** will create a new empty ward called block B ward 2\
+**`addward n/block C ward 1`** will create a new empty ward called block C ward 1
 
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Adding a patient: addpat
+
+### Deleting a ward from the system: delward
+This deletes the `WARD_NAME` specified from the system. The ward being deleted must be empty for this command to be successfully executed.
+
+**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+
+**Format: `delward n/WARD_NAME`**
+
+**Examples:**
+**`delward n/block B ward 2`** will remove block B ward 2 from the system. The ward must have been empty before deletion.
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+## Adding People
+These commands can be used to add people to a specified ward in the Patientist system.
+
+:warning: The ward specified must exist first. If it has not been added, perhaps you might want to check out [`addward`](#addward) first.
+
+### Adding a patient: addpat
 Adds a new patient to the system, and places them in the `WARD_NAME` assigned.
 Tags attached to a user are meant to be short notes that do not fit into any other category of patient details that can be added.
 
@@ -88,7 +108,8 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Adding a staff member: addstf
+
+### Adding a staff member: addstf
 Assigns specified `STAFF_NAME` to the specified `WARD_NAME`.
 The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
@@ -103,22 +124,59 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Adding a ward to the system: addward
-Creates an empty ward with the specified `WARD_NAME`.
 
-**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
+## Deleting people
+These commands are used to remove people from a ward in the Patientist system.
 
-**Format: `addward n/WARD_NAME`**
-`WARD_NAME` must be unique and cannot be the same as any existing name. This field is case-sensitive.
+### Deleting a person from the system based on list on GUI: delete
+{: #delete}
 
-**Examples:**
-**`addward n/block B ward 2`** will create a new empty ward called block B ward 2\
-**`addward n/block C ward 1`** will create a new empty ward called block C ward 1
+This deletes the person specified by `INDEX`. This index is the number beside the person on the list of persons on screen.
+
+:warning: `delete` does not work with ward, so calling the command when the wards are shown will result in nothing being done.
+
+**Format: `delete INDEX`**
+
+**Examples: `delete 3`**
 
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Listing all persons: list
+
+### Deleting a patient from the system: delpat
+This removes the patient from the system as specified by `ID_NUMBER`.
+The patient must currently exist for this command to be successfully executed.
+This will remove the patient from his or her assigned ward as well.
+
+**Format: `delpat id/ID_NUMBER`**
+
+**Examples:**
+**`delpat id/A0123456789B`** will delete all records of patient with ID number A0123456789B from the system.
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+### Deleting a staff member from the system: delstf
+This removes the staff from the system as specified by `ID_NUMBER`.
+The staff must currently exist for this command to be successfully executed.
+This will remove the staff from his or her assigned ward as well.
+
+**Format: `delstf id/ID_NUMBER`**
+
+**Examples:**
+**`delstf id/A12345B`** will delete all records of staff with ID number A12345B from the system.
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+## Listing information
+These commands can be used to list people and wards. 
+
+:information-source: List updates the GUI, which can affect index-based commands such as [`delete`](#delete)
+
+### Listing all persons: list
 Lists all the peoples’ names and corresponding ID, displaying any tags attached to them and showing the ward they are in.
 
 **Format: `list`**
@@ -126,7 +184,8 @@ Lists all the peoples’ names and corresponding ID, displaying any tags attache
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Listing all patients: lspat
+
+### Listing all patients: lspat
 Lists all the patients’ names and corresponding patient ID, displaying any tags attached to them and showing the ward they are in.
 
 **Format: `lspat`**
@@ -137,7 +196,8 @@ Lists all the patients’ names and corresponding patient ID, displaying any tag
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Listing staff members: lsstf
+
+### Listing staff members: lsstf
 
 Lists staff members’ names and the name of the ward they are assigned to.
 
@@ -150,7 +210,41 @@ can appear more than once if they are assigned to more than 1 ward.\
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Finding a person: find
+
+### Listing the names of all wards: lsward
+Lists all existing wards on the GUI. Only ward names will be displayed.
+
+**Format: `lsward`**
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+### Listing all patients in a particular ward: lswardpat
+Lists all the patients found in the given `WARD_NAME`.
+
+**Format: `lswardpat WARD_NAME`**
+
+**Examples: `lswardpat Block A Ward 1`** will list all patients in Block A Ward 1.
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+### Listing all staff in a particular ward: lswardstf
+Lists all the staff found in the given `WARD_NAME`.
+
+**Format: `lswardstf WARD_NAME`**
+
+**Examples: `lswardstf Block A Ward 1`** will list all staff in Block A Ward 1.
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+## Finding people
+These commands help you to find exactly who you are looking for.
+
+### Finding a person: find
 
 Finds all persons with names containing any of the specified keywords and displays them on the GUI.
 
@@ -163,7 +257,8 @@ Finds all persons with names containing any of the specified keywords and displa
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Finding a patient by ID number: findpat
+
+### Finding a patient by ID number: findpat
 
 Finds all patients with names containing any of the specified keywords or id matching the specified keyword and displays
 them on the GUI.
@@ -179,7 +274,7 @@ them on the GUI.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Finding a staff by ID number: findstf
+### Finding a staff by ID number: findstf
 
 Finds all staff with names containing any of the specified keywords or id matching the specified keyword and displays
 them on the GUI.
@@ -195,92 +290,11 @@ them on the GUI.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Adding patient status: addpatstatus
-Adds an entry to the list of patient statuses. This list of statuses can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
-command.
 
-**Note:** If the person indicated by the INDEX must be a `Patient`.
+## Editing a person's information
+These commands can help to edit a person's information if it had been keyed in incorrectly or if there is an update that needs to be reflected in Patientist.
 
-**Format: `addpatstatus INDEX s/STATUS [s/STATUS]...`**
-
-**Examples: `addpatstatus 1 s/Feeling alright s/Eating well`**
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-## Deleting patient status: delpatstatus
-Deletes the specified entry in the list of patient statuses. This list of statuses can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
-command.
-
-**Note:** If the person indicated by the PATIENT_INDEX must be a `Patient`.
-
-**Format: `delpatstatus PATIENT_INDEX STATUS_INDEX`**
-
-**Examples: `delpatstatus 1 1`** will delete the first status of the patient at the top of the patient list.
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-## Adding patient todo: addpattodo
-Adds an entry to the list of patient todos. This list of todos can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
-command.
-
-**Note:** If the person indicated by the INDEX must be a `Patient`.
-
-**Format: `addpattodo INDEX td/TODO [td/TODO]...`**
-
-**Examples: `addpattodo 1 td/Take medicine td/physio at 2`**
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-## Deleting patient todo: delpattodo
-Deletes the specified entry in the list of patient todos. This list of todos can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
-command.
-
-**Note:** If the person indicated by the PATIENT_INDEX must be a `Patient`.
-
-**Format: `delpattodo PATIENT_INDEX TODO_INDEX`**
-
-**Examples: `delpattodo 1 1`** will delete the first todo of the patient at the top of the patient list.
-
-[Go back to [Table of Contents](#table-of-contents)]
-
-
-
----
-
-## Listing the names of all wards: lsward
-Lists all existing wards on the GUI. Only ward names will be displayed.
-
-**Format: `lsward`**
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-## Listing all patients in a particular ward: lswardpat
-Lists all the patients found in the given `WARD_NAME`.
-
-**Format: `lswardpat WARD_NAME`**
-
-**Examples: `lswardpat Block A Ward 1`** will list all patients in Block A Ward 1.
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-
-## Listing all staff in a particular ward: lswardstf
-Lists all the staff found in the given `WARD_NAME`.
-
-**Format: `lswardstf WARD_NAME`**
-
-**Examples: `lswardstf Block A Ward 1`** will list all staff in Block A Ward 1.
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-
-## Update particulars of a person: edit
+### Update particulars of a person: edit
 This overwrites the specified person’s particulars with new particulars. This command works on both patients and staff.
 
 **Format: `edit INDEX [n/PATIENT_NAME] [t/TAG] [p/PHONE_NUMBER] [a/ADDRESS] [e/EMAIL]`**
@@ -292,58 +306,8 @@ This overwrites the specified person’s particulars with new particulars. This 
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-## Deleting a person from the system based on list on GUI: delete
-This deletes the person specified by `INDEX`. This index is the number beside the person on the list of persons on screen.
 
-**Format: `delete INDEX`**
-
-**Examples: `delete 3`**
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-## Deleting a patient from the system: delpat
-This removes the patient from the system as specified by `ID_NUMBER`.
-The patient must currently exist for this command to be successfully executed.
-This will remove the patient from his or her assigned ward as well.
-
-**Format: `delpat id/ID_NUMBER`**
-
-**Examples:**
-**`delpat id/A0123456789B`** will delete all records of patient with ID number A0123456789B from the system.
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-## Deleting a staff member from the system: delstf
-This removes the staff from the system as specified by `ID_NUMBER`.
-The staff must currently exist for this command to be successfully executed.
-This will remove the staff from his or her assigned ward as well.
-
-**Format: `delstf id/ID_NUMBER`**
-
-**Examples:**
-**`delstf id/A12345B`** will delete all records of staff with ID number A12345B from the system.
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-
-## Deleting a ward from the system: delward
-This deletes the `WARD_NAME` specified from the system. The ward being deleted must be empty for this command to be successfully executed.
-
-**Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
-
-**Format: `delward n/WARD_NAME`**
-
-**Examples:**
-**`delward n/block B ward 2`** will remove block B ward 2 from the system. The ward must have been empty before deletion.
-
-[Go back to [Table of Contents](#table-of-contents)]
-
----
-
-## Transferring a patient between wards: trfward
+### Transferring a patient between wards: trfward
 This moves the patient at `INDEX` position on the list to the specified `WARD_NAME`. `WARD_NAME` must already exist.
 
 **Warning: `WARD_NAME` is case-sensitive.** `block B ward 2` will refer to a different ward from `Block b Ward 2`
@@ -357,6 +321,88 @@ This moves the patient at `INDEX` position on the list to the specified `WARD_NA
 
 ---
 
+## Adding/removing todos to a patient
+These commands can add or remove todos with regards to a specified patient.
+
+### Adding patient todo: addpattodo
+Adds an entry to the list of patient todos. This list of todos can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
+command.
+
+**Note:** If the person indicated by the INDEX must be a `Patient`.
+
+**Format: `addpattodo INDEX td/TODO [td/TODO]...`**
+
+**Examples: `addpattodo 1 td/Take medicine td/physio at 2`**
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+### Deleting patient todo: delpattodo
+Deletes the specified entry in the list of patient todos. This list of todos can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
+command.
+
+**Note:** If the person indicated by the PATIENT_INDEX must be a `Patient`.
+
+**Format: `delpattodo PATIENT_INDEX TODO_INDEX`**
+
+**Examples: `delpattodo 1 1`** will delete the first todo of the patient at the top of the patient list.
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+## Adding/removing a patient's status
+These commands are used to add or remove status conditions from a specified patient.
+
+### Adding patient status: addpatstatus
+Adds an entry to the list of patient statuses. This list of statuses can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
+command.
+
+**Note:** If the person indicated by the INDEX must be a `Patient`.
+
+**Format: `addpatstatus INDEX s/STATUS [s/STATUS]...`**
+
+**Examples: `addpatstatus 1 s/Feeling alright s/Eating well`**
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+### Deleting patient status: delpatstatus
+Deletes the specified entry in the list of patient statuses. This list of statuses can be viewed by the [view](#viewing-the-details-of-a-specific-person--view)
+command.
+
+**Note:** If the person indicated by the PATIENT_INDEX must be a `Patient`.
+
+**Format: `delpatstatus PATIENT_INDEX STATUS_INDEX`**
+
+**Examples: `delpatstatus 1 1`** will delete the first status of the patient at the top of the patient list.
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+## Viewing the details of a specific person: view
+Lists the full detail of a specific person, including their name, patient ID and tags in the main window.
+
+**Format: `view INDEX`**
+
+**Examples:**
+**`view 1`** will display all the information associated with the 1st person shown on the GUI.
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+## Clearing the patientist: clear
+
+Clears the current session of patientist and restores it to empty state.
+
+**Format: `clear`**
+
+[Go back to [Table of Contents](#table-of-contents)]
+
+
+---
 ## Exiting the program: exit
 Exits the program.
 
