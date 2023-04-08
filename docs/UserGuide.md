@@ -9,13 +9,13 @@ reliably than traditional GUI based apps.
 
 ![MainScreen](images/Ui.png)
 
-<center>The GUI displayed after the app is launched.</center>
+<center><u>The GUI displayed after the app is launched.</u></center>
 
 <div style="page-break-after: always;"></div>
 
 --------------------------------------------------------------------------------------------------------------------
 
-## Using this guide 
+## Using this guide
 {: .no_toc}
 
 * If you are setting up for the first time, please have a look at our [Quick Start](#quick-start) section.
@@ -47,7 +47,7 @@ We will be using certain symbols throughout the User Guide, so here is a quick s
 
 ___
 
-## Table of Contents 
+## Table of Contents
 {: .no_toc}
 
 * Table of Contents
@@ -84,7 +84,7 @@ ___
 ## Adding/Removing Wards
 Patientist is meant to help reflect the physical state of your hospital, so if you are a new user and would like to update Patientist with the wards, here's what you do:
 
-Let's say the hospital has just added a new ward, with the name "Block B Ward 3", and you would like to add it to Patientist. 
+Let's say the hospital has just added a new ward, with the name "Block B Ward 3", and you would like to add it to Patientist.
 
 **Command entered**: [`addward n/Block B Ward 3`](#addward)
 
@@ -92,7 +92,7 @@ This is the message that you should see indicating that the ward has been added 
 
 ![addward.png](images/addward.png)
 
-<center>Message shown after entering addward</center> 
+<center><u>Message shown after entering addward</u></center>
 <br>
 
 This means that the ward "Block B Ward 3" has been added to Patientist.
@@ -786,6 +786,28 @@ Shows a popup explaining how to access the user guide, which is the help page.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
+---
+
 # Glossary
 
+| Term   | Definition                                   | 
+|--------|----------------------------------------------|
+| Person | Relating to either a patient or staff member |
 
+[Go back to [Table of Contents](#table-of-contents)]
+
+---
+
+# Planned Enhancements
+
+1. Currently, the `addward` command is case-sensitive, so `addward n/Block A Ward 1` and `addward n/block A ward 1`
+would result in two different wards being added, even though it is likely that they should refer to the same ward.
+We plan to make this command case-insensitive to ensure duplicate wards are not added by accident.
+2. The commands that add or delete todos and statuses from patients, `addpattodo`, `delpattodo`, `addpatstatus`, `delpatstatus`,
+currently change the order of patients in the list of patients. We plan to change this behaviour such that the index and
+position of patients is preserved when using these commands, so users would have an easier time tracking the patients.
+3. The `view` command currently does not update in real time, so if a change is made using a command lke `addpattodo`,
+the change will not be visible until the `view` command is used again. We plan to change it such that the `view` command updates
+the information shown in the GUI after every change so that the correct information is always reflected in the view panel. 
+
+[Go back to [Table of Contents](#table-of-contents)]
