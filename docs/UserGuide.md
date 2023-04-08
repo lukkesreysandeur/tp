@@ -102,10 +102,9 @@ Well, its just as simple to remove the ward. Simply use the `delward` command wi
 
 **Command entered**: [`delward n/Block B Ward 3`](#delward)
 
-A similar looking message should appear indicating that the ward was successfully removed.
+A similar looking message should appear indicating that the ward was successfully removed. Thereafter, the correct ward can be added to Patientist.
 
-Thereafter the correct ward can be added to Patientist.
-
+---
 
 ### Adding a ward to the system: addward
 {: #addward}
@@ -140,6 +139,12 @@ This deletes the `WARD_NAME` specified from the system. The ward being deleted m
 
 </div>
 
+<div markdown="span" class="alert alert-info">
+
+:information_source: The specified ward needs to be empty before deletion.
+
+</div>
+
 **Format: `delward n/WARD_NAME`**
 
 **Examples:**
@@ -148,7 +153,6 @@ This deletes the `WARD_NAME` specified from the system. The ward being deleted m
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
-
 ## Adding People
 Now that Patientist has all the wards entered into the system, we can start to add the people to the system.
 
@@ -161,6 +165,7 @@ This will the message that you should see:
 ![addpat.png](images/addpat.png)
 
 <center>Message shown when successfully adding patient.</center>
+<br>
 
 A similar command can also be used to add staff members, to make it easier to keep track of the staff as well.
 
@@ -174,6 +179,7 @@ The message shown will similarly reflect the staff member added along with their
 
 </div>
 
+___
 ### Adding a patient: addpat
 {: #addpat}
 
@@ -188,10 +194,12 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 
 <div markdown="span" class="alert alert-info">
 
-:information_source: 
+:information_source:
 `PRIORITY` can take values of either `LOW`, `MEDIUM` or `HIGH`. Please only enter one of these 3 values (case-sensitive).\
+<br>
 `ID_NUMBER` should be unique to each patient. This is not case-sensitive. A123456789B is identical to a123456789b.
-**This input will be capitalised automatically.**\
+**This input will be capitalised automatically.**
+<br>
 `PATIENT_NAME` need not be unique.
 
 </div>
@@ -222,7 +230,8 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
 :information_source:
 `ID_NUMBER` should be unique to each staff member. This is not case-sensitive. A123456789B is identical to a123456789b.
-**This input will be capitalised automatically.**\
+**This input will be capitalised automatically.**
+<br>
 `STAFF_NAME` need not be unique.
 
 </div>
@@ -238,7 +247,34 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 ---
 
 ## Deleting people
-Now let's imagine that a patient is being discharged from the hospital
+Now let's imagine that a patient is being discharged from the hospital, and you would like to remove this patient from the system.
+
+As it turns out, this can be done just as simply as the other commands.
+
+If the patient to be deleted can be viewed in the GUI, in this case John Doe, we can simply use this command, 
+where the number at the back is the number shown in the list next to the patient's name.
+
+**Command entered**: [`delete 11`](#delete)
+
+A message looking like this should be shown, indicating that the patient has been removed from the system.
+
+![delete.png](images/delete.png)
+
+<center>The message shown when a person is successfully deleted.</center>
+<br>
+
+However, it is easy to imagine if this could be quite difficult to do when there are many people in the system. Well not to worry! 
+We also support deleting people using their unique ID numbers. The following command would delete a patient with the ID A12345A.
+
+**Command entered**: [`delpat id/A12345A`](#delpat)
+
+Should there be a need, we also offer the same functionality to remove staff using their ID numbers.
+
+**Command entered**: [`delstf id/G74165Y`](#delstf)
+
+Both of these commands would result in a similar success message as the `delete` command shown above.
+
+---
 
 ### Deleting a person from the system based on list on GUI: delete
 {: #delete}
@@ -260,6 +296,8 @@ This deletes the person specified by `INDEX`. This index is the number beside th
 ---
 
 ### Deleting a patient from the system: delpat
+{: #delpat}
+
 This removes the patient from the system as specified by `ID_NUMBER`.
 The patient must currently exist for this command to be successfully executed.
 This will remove the patient from his or her assigned ward as well.
@@ -274,6 +312,8 @@ This will remove the patient from his or her assigned ward as well.
 ---
 
 ### Deleting a staff member from the system: delstf
+{: #delstf}
+
 This removes the staff from the system as specified by `ID_NUMBER`.
 The staff must currently exist for this command to be successfully executed.
 This will remove the staff from his or her assigned ward as well.
