@@ -11,6 +11,8 @@ easy for you to get tasks done faster and more reliably than traditional GUI bas
 
 <center><u>The GUI displayed after the app is launched.</u></center>
 
+---
+
 <div style="page-break-after: always;"></div>
 
 ## Using this guide
@@ -65,6 +67,8 @@ We will be using certain symbols throughout the User Guide, so here is a quick s
 
 </div>
 
+---
+
 <div style="page-break-after: always;"></div>
 
 ## Table of Contents
@@ -73,7 +77,7 @@ We will be using certain symbols throughout the User Guide, so here is a quick s
 * Table of Contents
 {:toc}
 
-<div style="page-break-after: always;"></div>
+---
 
 ## Quick start
 
@@ -99,9 +103,9 @@ We will be using certain symbols throughout the User Guide, so here is a quick s
 
 </div>
 
-<div style="page-break-after: always;"></div>
-
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## Adding/Removing Wards
 Patientist allows you to reflect the physical state of your hospital.
@@ -170,9 +174,10 @@ This deletes the `WARD_NAME` specified from the system. The ward being deleted m
 
 [Go back to [Table of Contents](#table-of-contents)]
 
+---
+
 <div style="page-break-after: always;"></div>
 
----
 ## Adding People
 Now that Patientist has all the wards entered into the system, we can start to add the people to the system.
 
