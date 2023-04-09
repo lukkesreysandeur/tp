@@ -495,6 +495,8 @@ to find either patients or staff using their name or their ID numbers.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ### Finding a person: find
 {: #find}
 
@@ -543,6 +545,8 @@ them on the GUI.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ### Finding a staff by ID number: findstf
 {: #findstf}
 
@@ -564,6 +568,8 @@ them on the GUI.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## Editing a person's information
 Now imagine that a person's information has been keyed incorrectly, or if a person has been transferred to another ward, 
