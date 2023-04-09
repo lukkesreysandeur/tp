@@ -128,6 +128,7 @@ A similar looking message should appear indicating that the ward was successfull
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Adding a ward to the system: addward
 {: #addward}
 
@@ -207,6 +208,7 @@ The message shown will similarly reflect the staff member added along with their
 [Go back to [Table of Contents](#table-of-contents)]
 
 ___
+
 ### Adding a patient: addpat
 {: #addpat}
 
@@ -404,6 +406,7 @@ Lists all the peoples’ names and corresponding ID, displaying any tags attache
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Listing all patients: lspat
 {: #lspat}
 
@@ -417,6 +420,7 @@ Lists all the patients’ names and corresponding patient ID, displaying any tag
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Listing staff members: lsstf
 {: #lsstf}
 
@@ -444,6 +448,7 @@ Lists all existing wards on the GUI. Only ward names will be displayed.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Listing all patients in a particular ward: lswardpat
 {: #lswardpat}
 
@@ -456,6 +461,7 @@ Lists all the patients found in the given `WARD_NAME`.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Listing all staff in a particular ward: lswardstf
 {: #lswardstf}
 
@@ -488,6 +494,7 @@ to find either patients or staff using their name or their ID numbers.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Finding a person: find
 {: #find}
 
@@ -535,6 +542,7 @@ them on the GUI.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Finding a staff by ID number: findstf
 {: #findstf}
 
@@ -584,6 +592,7 @@ we can use the [`trfward`](#trfward) command.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Update particulars of a person: edit
 {: #edit}
 
@@ -637,6 +646,7 @@ and the todo as shown in the todo list.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Adding patient todo: addpattodo
 {: #addpattodo}
 
@@ -657,6 +667,7 @@ You can enter any number of todo arguments for this command.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Deleting patient todo: delpattodo
 {: #delpattodo}
 
@@ -694,6 +705,7 @@ Conversely, if a patient's status is no longer relevant, then we can just as eas
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Adding patient status: addpatstatus
 {: #addpatstatus}
 
@@ -714,6 +726,7 @@ You can enter any number of status arguments for this command.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Deleting patient status: delpatstatus
 {: #delpatstatus}
 
@@ -752,6 +765,7 @@ thereby making it more convenient to look up the full details of a person.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
 ### Viewing the details of a specific person: view
 {: #view}
 
@@ -777,6 +791,7 @@ Clears the current session of patientist and restores it to empty state.
 
 
 ---
+
 ## Exiting the program: exit
 {: #exit}
 
