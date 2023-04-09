@@ -113,8 +113,6 @@ Let's say the hospital has just added a new ward, with the name "Block B Ward 3"
 
 **Command entered**: [`addward n/Block B Ward 3`](#addward)
 
-This is the message that you should see indicating that the ward has been added to the system.
-
 ![addward.png](images/addward.png)
 
 <center><u>Message shown after entering addward</u></center>
