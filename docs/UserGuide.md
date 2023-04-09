@@ -302,7 +302,7 @@ Both of these commands would result in a similar success message as the [`delete
 ### Deleting a person from the system based on list on GUI: delete
 {: #delete}
 
-This deletes the person specified by `INDEX`. This index is the number beside the person on the list of persons on screen.
+This deletes the person specified by `INDEX`. 
 
 <div markdown="span" class="alert alert-danger">
 
@@ -819,6 +819,8 @@ Exits the program.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## Viewing help: help
 {: #help}
 
@@ -840,6 +842,9 @@ Shows a popup explaining how to access the user guide, which is the help page.
 [Go back to [Table of Contents](#table-of-contents)]
 
 --------------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-after: always;"></div>
+
 # Command Summary
 
 | Action                                                | Format                                                                                               | Examples                                                                                                       |
