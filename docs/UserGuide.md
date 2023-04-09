@@ -21,7 +21,7 @@ reliably than traditional GUI based apps.
 * If you are setting up for the first time, please have a look at our [Quick Start](#quick-start) section.
 * If you are unsure how to use Patientist, the [Features](#features) section might be a good place to start.
 * For ease of navigation, clicking the hyperlinks at the bottom of each section to go back to the table of contents.
-* If there are any terms that are unfamiliar to you, do check out our [glossary](#glossary) for a brief description of those terms.
+* If there are any terms that are unfamiliar to you, do check out our [Glossary](#glossary) for a brief description of those terms.
 
 ### Overview of symbols
 {: .no_toc}
@@ -81,7 +81,7 @@ ___
 2. Download the latest release of Patientist from [here](https://github.com/AY2223S2-CS2103T-T12-1/tp/releases/latest).
 3. Copy the file to the folder you'd like to use as the _home folder_ for your Patientist app.
 4. Double-click the Patientist.jar file to open the app. There will be some sample data to play around with.
-5. Type in commands and press ENTER to execute the command. `help` would be a good first command to use to get a sensing of how to use this app.
+5. Type in commands and press ENTER to execute the command. [`help`](#help) would be a good first command to use to get a sensing of how to use this app.
 6. Refer to the [Features](#features) or [Command Summary](#command-summary) sections to see summary of commands.
 
 --------------------------------------------------------------------------------------------------------------------
@@ -282,7 +282,7 @@ A message looking like this should be shown, indicating that the patient has bee
 
 However, it is easy to imagine if this could be quite difficult to do when there are many people in the system. Well not to worry! 
 You can simply remove patients using [`delpat`](#delpat), and remove staff members using [`delstf`](#delstf), by just specifying their unique ID numbers.
-Both of these commands would result in a similar success message as the `delete` command shown above.
+Both of these commands would result in a similar success message as the [`delete`](#delete) command shown above.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -468,7 +468,8 @@ Finds all persons with names containing any of the specified keywords and displa
 
 <div markdown="span" class="alert alert-info">
 
-:information_source: `find` will list any person whose name matches the given keywords.
+:information_source: `find` will list any person whose name matches the given keywords.\
+You can enter any number of arguments for this command.
 
 </div>
 
@@ -617,7 +618,8 @@ command.
 
 <div markdown="span" class="alert alert-info">
 
-:information_source: The person indicated by the INDEX must be a `Patient`.
+:information_source: The person indicated by the INDEX must be a `Patient`.\
+You can enter any number of todo arguments for this command.
 
 </div>
 
@@ -673,7 +675,8 @@ command.
 
 <div markdown="span" class="alert alert-info">
 
-:information_source: The person indicated by the PATIENT_INDEX must be a `Patient`.
+:information_source: The person indicated by the PATIENT_INDEX must be a `Patient`.\
+You can enter any number of status arguments for this command.
 
 </div>
 
@@ -706,7 +709,7 @@ command.
 
 ## Viewing all details of a person
 So far, we have only been using the list to view information pertaining to certain people, but what if you want to view 
-all the details of a person? Well fret not, because we can use the [`view`] command to see all the data related to a person 
+all the details of a person? Well fret not, because we can use the [`view`](#view) command to see all the data related to a person 
 in the system, say for instance, a patient by the name of Roy.
 
 **Command entered**: [`view 10`](#view)
