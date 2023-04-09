@@ -336,8 +336,6 @@ This will remove the patient from his or her assigned ward as well.
 
 ---
 
-<div style="page-break-after: always;"></div>
-
 ### Deleting a staff member from the system: delstf
 {: #delstf}
 
