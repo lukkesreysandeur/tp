@@ -13,8 +13,6 @@ easy for you to get tasks done faster and more reliably than traditional GUI bas
 
 <div style="page-break-after: always;"></div>
 
---------------------------------------------------------------------------------------------------------------------
-
 ## Using this guide
 {: .no_toc}
 
@@ -235,7 +233,7 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 
 [Go back to [Table of Contents](#table-of-contents)]
 
----
+<div style="page-break-after: always;"></div>
 
 ### Adding a staff member: addstf
 {: #addstf}
