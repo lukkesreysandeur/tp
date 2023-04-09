@@ -364,8 +364,8 @@ If perhaps you would like to see all the people in a particular ward, then the w
 
 <div markdown="span" class="alert alert-success">
 
-:bulb: List updates the GUI, which can affect index-based commands such as [`delete`](#delete), e.g. Index-based 
-commands for people will not work will the wards are being shown from [`lsward`](#lsward)
+:bulb: List updates the GUI, which can affect index-based commands such as [`delete`](#delete), e.g. index-based 
+commands for people will not work if the wards are being shown from [`lsward`](#lsward)
 
 </div> 
 
@@ -550,7 +550,7 @@ we can use the [`trfward`](#trfward) command.
 
 ![trfward.png](images/trfward.png)
 
-<center><u>Message showm upon transferring a person to another ward.</u></center>
+<center><u>Message shown upon transferring a person to another ward.</u></center>
 <br>
 
 [Go back to [Table of Contents](#table-of-contents)]
