@@ -68,7 +68,6 @@ We will be using certain symbols throughout the User Guide, so here is a quick s
 </div>
 
 <div style="page-break-after: always;"></div>
-___
 
 ## Table of Contents
 {: .no_toc}
@@ -76,7 +75,7 @@ ___
 * Table of Contents
 {:toc}
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## Quick start
 
@@ -172,6 +171,8 @@ This deletes the `WARD_NAME` specified from the system. The ward being deleted m
 **`delward n/block B ward 2`** will remove block B ward 2 from the system. The ward must have been empty before deletion.
 
 [Go back to [Table of Contents](#table-of-contents)]
+
+<div style="page-break-after: always;"></div>
 
 ---
 ## Adding People
