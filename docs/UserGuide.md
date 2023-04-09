@@ -60,7 +60,7 @@ ___
 1. Ensure you have Java 11 installed on your computer. If you are unsure you can download it from [here](https://www.oracle.com/sg/java/technologies/javase/jdk11-archive-downloads.html).
 2. Download the latest release of Patientist from [here](https://github.com/AY2223S2-CS2103T-T12-1/tp/releases/latest).
 3. Copy the file to the folder you'd like to use as the _home folder_ for your Patientist app.
-4. Double-click the .jar file to open the app. There will be some sample data to play around with.
+4. Double-click the Patientist.jar file to open the app. There will be some sample data to play around with.
 5. Type in commands and press ENTER to execute the command. `help` would be a good first command to use to get a sensing of how to use this app.
 6. Refer to the [Features](#features) or [Command Summary](#command-summary) sections to see summary of commands.
 
@@ -169,7 +169,7 @@ A similar command can also be used to add staff members, to make it easier to ke
 All that you need to do is enter the command [`addstf`](#addstf) with the staff's details to add them to the system.
 The message shown will similarly reflect the staff member added along with their entered details.
 
-<div markdown="span" class="alert alert-warning">
+<div markdown="span" class="alert alert-danger">
 
 :warning: The ward specified must exist first. If it has not been added, perhaps you might want to check out [`addward`](#addward) first.
 
@@ -273,9 +273,9 @@ Both of these commands would result in a similar success message as the `delete`
 
 This deletes the person specified by `INDEX`. This index is the number beside the person on the list of persons on screen.
 
-<div markdown="span" class="alert alert-warning">
+<div markdown="span" class="alert alert-danger">
 
-:warning: `delete` does not work with ward, so calling the command when the wards are shown will result in nothing being done.
+:warning: `delete` does not work with ward, will show an error message if called when wards are shown.
 
 </div>
 
@@ -344,7 +344,8 @@ If perhaps you would like to see all the people in a particular ward, then the w
 
 <div markdown="span" class="alert alert-success">
 
-:bulb: List updates the GUI, which can affect index-based commands such as [`delete`](#delete)
+:bulb: List updates the GUI, which can affect index-based commands such as [`delete`](#delete), e.g. Index-based 
+commands for people will not work will the wards are being shown from [`lsward`](#lsward)
 
 </div> 
 
@@ -582,7 +583,7 @@ along with the index and the task to be done to add to a patient's todo list.
 <center><u>Message shown upon adding a todo for a patient.</u></center>
 <br>
 
-Similarly, once the todo has been completed, you can remove the todo using [`delpattodo`] with the index of the patient 
+Similarly, once the todo has been completed, you can remove the todo using [`delpattodo`](#delpattodo) with the index of the patient 
 and the todo as shown in the todo list.
 
 [Go back to [Table of Contents](#table-of-contents)]
@@ -631,7 +632,7 @@ command.
 Patients are also bound to have some status details which may be important for staff to view. You can add a status detail 
 to a patient using the [`addpatstatus`](#addpatstatus) command, with the status detail you would like to add.
 
-**Command entered**: [`addpatstatus 3 s/Fall risk`]
+**Command entered**: [`addpatstatus 3 s/Fall risk`](#addpatstatus)
 
 ![addpatstatus.png](images/addpatstatus.png)
 
@@ -727,6 +728,8 @@ Clears the current session of patientist and restores it to empty state.
 
 ---
 ## Exiting the program: exit
+{: #exit}
+
 Exits the program.
 
 **Format: `exit`**
@@ -736,6 +739,8 @@ Exits the program.
 ---
 
 ## Viewing help: help
+{: #help}
+
 Shows a popup explaining how to access the user guide, which is the help page.
 
 **Format: `help`**
@@ -756,33 +761,33 @@ Shows a popup explaining how to access the user guide, which is the help page.
 --------------------------------------------------------------------------------------------------------------------
 # Command Summary
 
-| Action                                                                                                        | Format                                                                                               | Examples                                                                                                       |
-|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| **[View help](#viewing-help--help)**                                                                          | `help`                                                                                               |                                                                                                                |
-| **[Clear patientist](#clearing-the-patientist--clear)**                                                       | `clear`                                                                                              |                                                                                                                |
-| **[Add patient](#adding-a-patient--addpat)**                                                                  | `addpat n/PATIENT_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME pr/PRIORITY [t/TAG]...` | `addpat n/John Doe id/A12345B w/Block B Ward 2 p/98765432 e/johnd@example.com a/Clementi Ave 2, #02-25 pr/LOW` |
-| **[Add staff](#adding-a-staff-member--addstf)**                                                               | `addstf n/STAFF_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME`                          | `addstf n/Dr Mallory Wong id/A987654321H p/97365482 e/mwong@example.com a/390 Geylang Rd w/block B ward 2`     |
-| **[Add ward](#adding-a-ward-to-the-system--addward)**                                                         | `addward n/WARD_NAME`                                                                                | `addward n/block B ward 2`                                                                                     |
-| **[List patients](#listing-all-patients--lspat)**                                                             | `lspat`                                                                                              |                                                                                                                |
-| **[List staff members](#listing-staff-members--lsstf)**                                                       | `lsstf`                                                                                              |                                                                                                                |
-| **[Find person](#finding-a-person--find)**                                                                    | `find NAME`                                                                                          | `find Alice Tan`                                                                                               |
-| **[Find patient by ID](#finding-a-patient-by-id-number--findpat)**                                            | `findpat [n/NAME] [id/ID_NUMBER]`                                                                    | `findpat n/Alex Bob Charles`, `findpat id/A12345B`                                                             |
-| **[Find staff by ID](#finding-a-staff-by-id-number--findstf)**                                                | `findstf [n/NAME] [id/ID_NUMBER]`                                                                    | `findstf n/Alex Bob Charles`, `findstf id/A12345B`                                                             |
-| **[Add patient status](#adding-patient-status--addpatstatus)**                                                | `addpatstatus INDEX s/STATUS [s/STATUS]... `                                                         | `addpatstatus 1 s/Feeling alright s/Eating well`                                                               |
-| **[Delete patient status](#deleting-patient-status--delpatstatus)**                                           | `delpatstatus PATIENT_INDEX STATUS_INDEX`                                                            | `delpatstatus PATIENT_INDEX STATUS_INDEX`                                                                      |
-| **[Add patient todo](#adding-patient-todo--addpattodo)**                                                      | `addpattodo INDEX td/TODO [td/TODO]...`                                                              | `addpattodo 1 td/Take medicine td/physio at 2`                                                                 |
-| **[Delete patient todo](#deleting-patient-todo--delpattodo)**                                                 | `delpattodo PATIENT_INDEX TODO_INDEX`                                                                | `delpattodo 1 1`                                                                                               |
-| **[View details of a person](#viewing-the-details-of-a-specific-person--view)**                               | `view INDEX`                                                                                         | `view 1`                                                                                                       |
-| **[List wards](#listing-the-names-of-all-wards--lsward)**                                                     | `lsward`                                                                                             |                                                                                                                |
-| **[List patients in a ward](#listing-all-patients-in-a-particular-ward--lswardpat)**                          | `lswardpat WARD_NAME`                                                                                | `lswardpat Block A Ward 1`                                                                                     |
-| **[List staff in a ward](#listing-all-staff-in-a-particular-ward--lswardstf)**                                | `lswardstf WARD_NAME`                                                                                | `lswardstf Block A Ward 1`                                                                                     |
-| **[Update person's particulars](#update-particulars-of-a-person--edit)**                                      | `edit INDEX [n/PATIENT_NAME] [t/TAG] [p/PHONE_NUMBER] [a/ADDRESS] [e/EMAIL]`                         | `edit 2 n/Bob Tan p/91234567`                                                                                  |
-| **[Delete person from system based on GUI](#deleting-a-person-from-the-system-based-on-list-on-gui--delete)** | `delete INDEX`                                                                                       | `delete 2`                                                                                                     |
-| **[Delete patient from system](#deleting-a-patient-from-the-system--delpat)**                                 | `delpat id/ID_NUMBER`                                                                                | `delpat id/A0123456789B`                                                                                       |
-| **[Delete staff member from system](#deleting-a-staff-member-from-the-system--delstf)**                       | `delstf id/ID_NUMBER`                                                                                | `delstf id/A12345B`                                                                                            |
-| **[Delete ward from system](#deleting-a-ward-from-the-system--delward)**                                      | `delward n/WARD_NAME`                                                                                | `delward n/block B ward 2`                                                                                     |
-| **[Transferring patient between wards](#transferring-a-patient-between-wards--trfward)**                      | `trfward INDEX w/WARD_NAME`                                                                          | `trfward 2 w/Block C Ward 1`                                                                                   |
-| **[Exit the program](#exiting-the-program--exit)**                                                            | `exit`                                                                                               |                                                                                                                |
+| Action                                                | Format                                                                                               | Examples                                                                                                       |
+|-------------------------------------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| **[View help](#help)**                                | `help`                                                                                               |                                                                                                                |
+| **[Clear patientist](#clear)**                        | `clear`                                                                                              |                                                                                                                |
+| **[Add patient](#addpat)**                            | `addpat n/PATIENT_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME pr/PRIORITY [t/TAG]...` | `addpat n/John Doe id/A12345B w/Block B Ward 2 p/98765432 e/johnd@example.com a/Clementi Ave 2, #02-25 pr/LOW` |
+| **[Add staff](#addstf)**                              | `addstf n/STAFF_NAME id/ID_NUMBER p/PHONE_NO e/EMAIL a/ADDRESS w/WARD_NAME`                          | `addstf n/Dr Mallory Wong id/A987654321H p/97365482 e/mwong@example.com a/390 Geylang Rd w/block B ward 2`     |
+| **[Add ward](#addward)**                              | `addward n/WARD_NAME`                                                                                | `addward n/block B ward 2`                                                                                     |
+| **[List patients](#lspat)**                           | `lspat`                                                                                              |                                                                                                                |
+| **[List staff members](#lsstf)**                      | `lsstf`                                                                                              |                                                                                                                |
+| **[Find person](#find)**                              | `find NAME`                                                                                          | `find Alice Tan`                                                                                               |
+| **[Find patient by ID](#findpat)**                    | `findpat [n/NAME] [id/ID_NUMBER]`                                                                    | `findpat n/Alex Bob Charles`, `findpat id/A12345B`                                                             |
+| **[Find staff by ID](#findstf)**                      | `findstf [n/NAME] [id/ID_NUMBER]`                                                                    | `findstf n/Alex Bob Charles`, `findstf id/A12345B`                                                             |
+| **[Add patient status](#addpatstatus)**               | `addpatstatus INDEX s/STATUS [s/STATUS]... `                                                         | `addpatstatus 1 s/Feeling alright s/Eating well`                                                               |
+| **[Delete patient status](#delpatstatus)**            | `delpatstatus PATIENT_INDEX STATUS_INDEX`                                                            | `delpatstatus PATIENT_INDEX STATUS_INDEX`                                                                      |
+| **[Add patient todo](#addpattodo)**                   | `addpattodo INDEX td/TODO [td/TODO]...`                                                              | `addpattodo 1 td/Take medicine td/physio at 2`                                                                 |
+| **[Delete patient todo](#delpattodo)**                | `delpattodo PATIENT_INDEX TODO_INDEX`                                                                | `delpattodo 1 1`                                                                                               |
+| **[View details of a person](#view)**                 | `view INDEX`                                                                                         | `view 1`                                                                                                       |
+| **[List wards](#lsward)**                             | `lsward`                                                                                             |                                                                                                                |
+| **[List patients in a ward](#lswardpat)**             | `lswardpat WARD_NAME`                                                                                | `lswardpat Block A Ward 1`                                                                                     |
+| **[List staff in a ward](#lswardstf)**                | `lswardstf WARD_NAME`                                                                                | `lswardstf Block A Ward 1`                                                                                     |
+| **[Update person's particulars](#edit)**              | `edit INDEX [n/PATIENT_NAME] [t/TAG] [p/PHONE_NUMBER] [a/ADDRESS] [e/EMAIL]`                         | `edit 2 n/Bob Tan p/91234567`                                                                                  |
+| **[Delete person from system based on GUI](#delete)** | `delete INDEX`                                                                                       | `delete 2`                                                                                                     |
+| **[Delete patient from system](#delpat)**             | `delpat id/ID_NUMBER`                                                                                | `delpat id/A0123456789B`                                                                                       |
+| **[Delete staff member from system](#delstf)**        | `delstf id/ID_NUMBER`                                                                                | `delstf id/A12345B`                                                                                            |
+| **[Delete ward from system](#delward)**               | `delward n/WARD_NAME`                                                                                | `delward n/block B ward 2`                                                                                     |
+| **[Transferring patient between wards](#trfward)**    | `trfward INDEX w/WARD_NAME`                                                                          | `trfward 2 w/Block C Ward 1`                                                                                   |
+| **[Exit the program](#exit)**                         | `exit`                                                                                               |                                                                                                                |
 
 [Go back to [Table of Contents](#table-of-contents)]
 
@@ -790,9 +795,16 @@ Shows a popup explaining how to access the user guide, which is the help page.
 
 # Glossary
 
-| Term   | Definition                                   | 
-|--------|----------------------------------------------|
-| Person | Relating to either a patient or staff member |
+| Term        | Definition                                                                                                                                                      | 
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Person      | Relating to either a patient or staff member                                                                                                                    |
+| Index       | The number specifying the position of the person, status, or todo. Is shown explicitly next to the corresponding item.                                          |
+| Command     | A specific instruction given to the Patientist appication to perform some task                                                                                  |
+| Argument    | A means of providing more information to a command, e.g. Using the command `view 9`, `9` is considered the argument has it provides the context to the command. |
+| Home Folder | The directory that contains the Patientist.jar file, usually defaults to Downloads right after downloading the file.                                            |
+| Java        | A widely-used programming language for coding applications, and the language used to make Patientist                                                            |
+| CLI         | Command Line Interface, a text-based user interface used to execute commands                                                                                    |
+| GUI         | Graphical User Interface, the point of contact between users and the Patientist application, displayed in a visual format                                       |
 
 [Go back to [Table of Contents](#table-of-contents)]
 
