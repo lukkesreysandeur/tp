@@ -280,9 +280,7 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
 ## Deleting people
 Now let's imagine that a patient is being discharged from the hospital, and you would like to remove this patient from the system.
-As it turns out, this can be done just as simply as the other commands.
-
-If the patient to be deleted can be viewed in the GUI, we can simply use this command.
+As it turns out, this can be done just as simply as the other commands. If the patient to be deleted can be viewed in the GUI, we can simply use this command.
 
 **Command entered**: [`delete 11`](#delete)
 
