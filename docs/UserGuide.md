@@ -276,6 +276,8 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## Deleting people
 Now let's imagine that a patient is being discharged from the hospital, and you would like to remove this patient from the system.
 As it turns out, this can be done rather easily. If the patient to be deleted can be viewed in the GUI, we can use this command.
@@ -320,7 +322,6 @@ This deletes the person specified by `INDEX`.
 {: #delpat}
 
 This removes the patient from the system as specified by `ID_NUMBER`.
-The patient must currently exist for this command to be successfully executed.
 This will remove the patient from his or her assigned ward as well.
 
 **Format: `delpat id/ID_NUMBER`**
@@ -336,7 +337,6 @@ This will remove the patient from his or her assigned ward as well.
 {: #delstf}
 
 This removes the staff from the system as specified by `ID_NUMBER`.
-The staff must currently exist for this command to be successfully executed.
 This will remove the staff from his or her assigned ward as well.
 
 **Format: `delstf id/ID_NUMBER`**
