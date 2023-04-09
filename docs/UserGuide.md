@@ -188,6 +188,8 @@ This will the message that you should see:
 <center><u>Message shown when successfully adding patient.</u></center>
 <br>
 
+<div style="page-break-after: always;"></div>
+
 A similar command can also be used to add staff members, to make it easier to keep track of the staff as well.
 All that you need to do is enter the command [`addstf`](#addstf) with the staff's details to add them to the system.
 The message shown will similarly reflect the staff member added along with their entered details.
@@ -263,6 +265,8 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 **`addstf n/Nurse Joy id/A345678Z p/81623753 e/nurse.joy@example.com a/900 Still Rd w/block B ward 2`**
 
 [Go back to [Table of Contents](#table-of-contents)]
+
+<div style="page-break-after: always;"></div>
 
 ---
 
