@@ -821,5 +821,10 @@ position of patients is preserved when using these commands, so users would have
 3. The `view` command currently does not update in real time, so if a change is made using a command lke `addpattodo`,
 the change will not be visible until the `view` command is used again. We plan to change it such that the `view` command updates
 the information shown in the GUI after every change so that the correct information is always reflected in the view panel. 
+4. The `lsward` command also does not update in real time like `view`. Commands that change state of the ward like `addpat` 
+may not have their changes reflected until `lsward` is called again. We plan to change this in the future such that the information
+shown in ward list always reflects the internal state of Patientist.
+5. Currently, `help` only links the URL to this User Guide. We plan to change it in the future to show a command summary as well 
+to simplify the process of finding the syntax for a certain command.
 
 [Go back to [Table of Contents](#table-of-contents)]
