@@ -581,6 +581,8 @@ of the [`edit`](#edit) command, with the index of the person, and the informatio
 <center><u>Message shown upon editing a person's details.</u></center>
 <br>
 
+<div style="page-break-after: always;"></div>
+
 Now let's say that the same patient Alex Yeo is being transferred to another ward, Block B Ward 2. To make this change, 
 we can use the [`trfward`](#trfward) command.
 
@@ -594,6 +596,8 @@ we can use the [`trfward`](#trfward) command.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### Update particulars of a person: edit
 {: #edit}
@@ -630,6 +634,8 @@ This moves the patient at `INDEX` position on the list to the specified `WARD_NA
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## Adding/removing todos to a patient
 As hospital staff, I imagine that you will have to keep track of certain tasks to be done with regards to certain patients, so 
 we have also added support for personal todo lists for each patient. You can use the [`addpattodo`](#addpattodo) command, 
@@ -648,6 +654,8 @@ and the todo as shown in the todo list.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### Adding patient todo: addpattodo
 {: #addpattodo}
@@ -690,6 +698,8 @@ command.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## Adding/removing a patient's status
 Patients are also bound to have some status details which may be important for staff to view. You can add a status detail 
 to a patient using the [`addpatstatus`](#addpatstatus) command, with the status detail you would like to add.
@@ -707,6 +717,8 @@ Conversely, if a patient's status is no longer relevant, then we can just as eas
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### Adding patient status: addpatstatus
 {: #addpatstatus}
@@ -749,6 +761,8 @@ command.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## Viewing all details of a person
 So far, we have only been using the list to view information pertaining to certain people, but what if you want to view 
 all the details of a person? Well fret not, because we can use the [`view`](#view) command to see all the data related to a person 
@@ -767,6 +781,8 @@ thereby making it more convenient to look up the full details of a person.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### Viewing the details of a specific person: view
 {: #view}
