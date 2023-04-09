@@ -45,6 +45,25 @@ We will be using certain symbols throughout the User Guide, so here is a quick s
 
 </div>
 
+### Components of Patientist
+Throughout the User Guide, we may refer to certain components of the application, so we have labelled them in the
+image below for you to reference easily.
+
+![components.png](images/components.png)
+
+<center><u>Components of Patientist</u></center>
+<br>
+
+| Component           | Location(with respect to the above image) | What it does                                                                                                                      |
+|---------------------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| Command Prompt      | Purple                                    | This is where you type the commands to be executed                                                                                |
+| Message Box         | Green                                     | This is where Patienist gives you messages, usually pertaining to whether a certain command has been executed successfully or not |
+| List Panel          | Orange                                    | This is where you can view information in a list; will be a list of people or wards                                               |
+| View panel          | Blue                                      | This is where you can view all the detailed information in relation to a specific person                                          |
+| Help button         | Top of screen                             | Allows you to access the help command without having to type the command                                                          |
+| Exit button         | Top of screen                             | Similarly allows you to exit the program without having to type the command                                                       |
+| Saved File Location | Bottom of screen                          | Displays the current location that the Patientist data is being saved to                                                          |
+
 ___
 
 ## Table of Contents
@@ -524,7 +543,7 @@ of the [`edit`](#edit) command, with the index of the person, and the informatio
 <br>
 
 Now let's say that the same patient Alex Yeo is being transferred to another ward, Block B Ward 2. To make this change, 
-we can use the [`trfward`] command.
+we can use the [`trfward`](#trfward) command.
 
 **Command entered**: [`trfward 3 w/Block B Ward 2`](#trfward)
 
@@ -576,7 +595,7 @@ As hospital staff, I imagine that you will have to keep track of certain tasks t
 we have also added support for personal todo lists for each patient. You can use the [`addpattodo`](#addpattodo) command, 
 along with the index and the task to be done to add to a patient's todo list.
 
-**Command entered**: [`addpattodo 3 td/Dialysis at 2pm`]
+**Command entered**: [`addpattodo 3 td/Dialysis at 2pm`](#addpattodo)
 
 ![addpattodo.png](images/addpattodo.png)
 
