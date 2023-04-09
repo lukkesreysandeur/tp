@@ -2,10 +2,10 @@
 layout: page
 title: Patientist User Guide
 ---
-Patientist is a desktop app used for managing patients and staff within a medical facility. This application is optimised
-for use via a Command Line Interface (CLI), while still having a Graphical User Interface (GUI) for users to fall back
-on. If you are a strong typist and are familiar with the system, Patientist can get your tasks done faster and more
-reliably than traditional GUI based apps.
+Patientist is command-line interface (CLI) based desktop app that is designed to streamline patient and staff management for 
+small clinics and hospitals. Its intuitive interface is easy to navigate, and its command-based system is straightforward
+and efficient. With just a few keystrokes, you can access patient records, add todos and manage your staff, making it
+easy for you to get tasks done faster and more reliably than traditional GUI based apps.
 
 ![MainScreen](images/Ui.png)
 
