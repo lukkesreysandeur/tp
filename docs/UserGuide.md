@@ -23,6 +23,25 @@ easy for you to get tasks done faster and more reliably than traditional GUI bas
 * For ease of navigation, clicking the hyperlinks at the bottom of each section to go back to the table of contents.
 * If there are any terms that are unfamiliar to you, do check out our [Glossary](#glossary) for a brief description of those terms.
 
+### Components of Patientist
+Throughout the User Guide, we may refer to certain components of the application, so we have labelled them in the
+image below for you to reference easily.
+
+![components.png](images/components.png)
+
+<center><u>Components of Patientist</u></center>
+<br>
+
+| Component           | Location(with respect to the above image) | What it does                                                                                                                      |
+|---------------------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| Command Prompt      | Purple                                    | This is where you type the commands to be executed                                                                                |
+| Message Box         | Green                                     | This is where Patienist gives you messages, usually pertaining to whether a certain command has been executed successfully or not |
+| List Panel          | Orange                                    | This is where you can view information in a list; will be a list of people or wards                                               |
+| View panel          | Blue                                      | This is where you can view all the detailed information in relation to a specific person                                          |
+| Help button         | Top of screen                             | Allows you to access the help command without having to type the command                                                          |
+| Exit button         | Top of screen                             | Similarly allows you to exit the program without having to type the command                                                       |
+| Saved File Location | Bottom of screen                          | Displays the current location that the Patientist data is being saved to                                                          |
+
 ### Overview of symbols
 {: .no_toc}
 
@@ -46,25 +65,7 @@ We will be using certain symbols throughout the User Guide, so here is a quick s
 
 </div>
 
-### Components of Patientist
-Throughout the User Guide, we may refer to certain components of the application, so we have labelled them in the
-image below for you to reference easily.
-
-![components.png](images/components.png)
-
-<center><u>Components of Patientist</u></center>
-<br>
-
-| Component           | Location(with respect to the above image) | What it does                                                                                                                      |
-|---------------------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Command Prompt      | Purple                                    | This is where you type the commands to be executed                                                                                |
-| Message Box         | Green                                     | This is where Patienist gives you messages, usually pertaining to whether a certain command has been executed successfully or not |
-| List Panel          | Orange                                    | This is where you can view information in a list; will be a list of people or wards                                               |
-| View panel          | Blue                                      | This is where you can view all the detailed information in relation to a specific person                                          |
-| Help button         | Top of screen                             | Allows you to access the help command without having to type the command                                                          |
-| Exit button         | Top of screen                             | Similarly allows you to exit the program without having to type the command                                                       |
-| Saved File Location | Bottom of screen                          | Displays the current location that the Patientist data is being saved to                                                          |
-
+<div style="page-break-after: always;"></div>
 ___
 
 ## Table of Contents
@@ -72,6 +73,8 @@ ___
 
 * Table of Contents
 {:toc}
+
+<div style="page-break-after: always;"></div>
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -98,6 +101,8 @@ ___
 * Extra _arguments_ for commands that take in exactly 0 _arguments_ will be ignored, e.g. `help 0` will bring up the help window as with just `help`
 
 </div>
+
+<div style="page-break-after: always;"></div>
 
 ---
 
