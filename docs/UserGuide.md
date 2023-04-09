@@ -368,6 +368,8 @@ All three commands would show a message that looks like this, and update the GUI
 <center><u>Message shown upon listing people.</u></center>
 <br>
 
+<div style="page-break-after: always;"></div>
+
 If you would like to have an overview of the wards, that is also possible using [`lsward`](#lsward), which will display the GUI as shown below.
 
 ![lsward.png](images/lsward.png)
@@ -389,6 +391,9 @@ commands for people will not work if the wards are being shown from [`lsward`](#
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
+<div style="page-break-after: always;"></div>
+
 ### Listing all persons: list
 {: #list}
 
@@ -426,6 +431,9 @@ can appear more than once if they are assigned to more than 1 ward.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
+<div style="page-break-after: always;"></div>
+
 ### Listing the names of all wards: lsward
 {: #lsward}
 
@@ -460,6 +468,8 @@ Lists all the staff found in the given `WARD_NAME`.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## Finding people
 Okay, but what if you are looking for one person in particular? To make things easier for you, we have added the find functionality, 
