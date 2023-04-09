@@ -238,6 +238,8 @@ Tags attached to a user are meant to be short notes that do not fit into any oth
 
 [Go back to [Table of Contents](#table-of-contents)]
 
+---
+
 <div style="page-break-after: always;"></div>
 
 ### Adding a staff member: addstf
@@ -270,9 +272,9 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
 [Go back to [Table of Contents](#table-of-contents)]
 
-<div style="page-break-after: always;"></div>
-
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## Deleting people
 Now let's imagine that a patient is being discharged from the hospital, and you would like to remove this patient from the system.
@@ -334,6 +336,8 @@ This will remove the patient from his or her assigned ward as well.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ### Deleting a staff member from the system: delstf
 {: #delstf}
 
@@ -349,6 +353,8 @@ This will remove the staff from his or her assigned ward as well.
 [Go back to [Table of Contents](#table-of-contents)]
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## Listing information
 Sometimes, you may want to have a look at all the staff, or all the wards currently stored in the system. This is also easily done using the list commands.
