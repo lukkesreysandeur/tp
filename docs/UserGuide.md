@@ -894,6 +894,8 @@ Shows a popup explaining how to access the user guide, which is the help page.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 # Planned Enhancements
 
 1. Currently, the `addward` command is case-sensitive, so `addward n/Block A Ward 1` and `addward n/block A ward 1`
@@ -912,3 +914,5 @@ shown in ward list always reflects the internal state of Patientist.
 to simplify the process of finding the syntax for a certain command.
 
 [Go back to [Table of Contents](#table-of-contents)]
+
+---
