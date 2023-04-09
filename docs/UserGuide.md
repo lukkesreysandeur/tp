@@ -24,6 +24,8 @@ easy for you to get tasks done faster and more reliably than traditional GUI bas
 * If there are any terms that are unfamiliar to you, do check out our [Glossary](#glossary) for a brief description of those terms.
 
 ### Components of Patientist
+{: .no_toc}
+
 Throughout the User Guide, we may refer to certain components of the application, so we have labelled them in the
 image below for you to reference easily.
 
@@ -73,8 +75,6 @@ ___
 
 * Table of Contents
 {:toc}
-
-<div style="page-break-after: always;"></div>
 
 --------------------------------------------------------------------------------------------------------------------
 
