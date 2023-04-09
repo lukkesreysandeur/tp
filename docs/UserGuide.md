@@ -276,8 +276,6 @@ The STAFF_NAME will be displayed in the list of personnel in charge of the ward.
 
 ---
 
-<div style="page-break-after: always;"></div>
-
 ## Deleting people
 Now let's imagine that a patient is being discharged from the hospital, and you would like to remove this patient from the system.
 As it turns out, this can be done rather easily. If the patient to be deleted can be viewed in the GUI, we can use this command.
