@@ -107,7 +107,7 @@ ___
 ---
 
 ## Adding/Removing Wards
-Patientist is meant to help reflect the physical state of your hospital, so if you are a new user and would like to update Patientist with the wards, here's what you do:
+Patientist allows you to reflect the physical state of your hospital.
 
 Let's say the hospital has just added a new ward, with the name "Block B Ward 3", and you would like to add it to Patientist.
 
