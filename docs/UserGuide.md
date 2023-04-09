@@ -348,8 +348,6 @@ This will remove the staff from his or her assigned ward as well.
 
 ---
 
-<div style="page-break-after: always;"></div>
-
 ## Listing information
 Sometimes, you may want to have a look at all the staff, or all the wards currently stored in the system. This is also easily done using the list commands.
 
